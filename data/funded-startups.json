@@ -45,363 +45,817 @@
       "investors": [
         { "name": "Castle Island Ventures", "type": "VC", "lead": true },
         { "name": "Coinbase Ventures", "type": "VC" },
-        { "name": "Fin Capital", "type": "VC" },
-        { "name": "Variant", "type": "VC" },
-        { "name": "Quantonation", "type": "VC" },
-        { "name": "Balaji Srinivasan", "type": "Angel" }
+        { "name": "Fin Capital", "type": "VC" }
       ],
       "companyType": "Cybersecurity",
       "industry": "Crypto / Security",
       "location": "USA",
       "region": "North America",
-      "whyFunded": [
-        "First-mover in post-quantum crypto security",
-        "Quantum computing threat to current encryption is imminent",
-        "Strong investor roster including ex-Coinbase CTO"
-      ],
-      "usps": [
-        "Post-quantum cryptographic algorithms",
-        "Blockchain-native security solutions",
-        "Enterprise-ready quantum-safe infrastructure"
-      ],
+      "whyFunded": ["First-mover in post-quantum crypto security", "Quantum computing threat is imminent"],
+      "usps": ["Post-quantum cryptographic algorithms", "Blockchain-native security solutions"],
       "analysis": {
         "copyabilityScore": 1,
         "verdict": "VERY HARD TO COPY",
-        "reasoning": "Requires deep cryptography expertise and PhD-level talent. This is cutting-edge research turned product. Not for the faint-hearted.",
-        "alternativeApproach": "Skip this space unless you have quantum computing background. Instead, watch for companies that will NEED this tech and build integrations."
+        "reasoning": "Requires deep cryptography expertise and PhD-level talent.",
+        "alternativeApproach": "Skip this space unless you have quantum computing background."
       },
-      "articleUrl": "https://techstartups.com/2026/01/06/top-startup-and-tech-funding-news-january-6-2025/",
-      "companyUrl": "https://projecteleven.io",
+      "articleUrl": "https://techstartups.com/2026/01/06/",
       "datePublished": "2026-01-06",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-002",
       "source": "techstartups",
-      "companyName": "Even Healthcare",
-      "description": "Full-stack healthcare delivery combining 24/7 virtual care app with physical hospitals in India. Blending telemedicine with brick-and-mortar care.",
-      "fundingRound": "Series A",
-      "amountRaised": 20000000,
-      "currency": "USD",
-      "investors": [
-        { "name": "Catapult Ventures", "type": "VC", "lead": true }
-      ],
-      "companyType": "HealthTech",
-      "industry": "Healthcare",
-      "location": "India",
-      "region": "Asia",
-      "whyFunded": [
-        "Huge underserved healthcare market in India",
-        "Hybrid model (digital + physical) is defensible",
-        "Strong unit economics with tech-enabled efficiency"
-      ],
-      "usps": [
-        "24/7 virtual care app",
-        "Integrated physical hospital network",
-        "AI-powered triage and diagnostics"
-      ],
-      "analysis": {
-        "copyabilityScore": 2,
-        "verdict": "HARD TO COPY - CAPITAL INTENSIVE",
-        "reasoning": "Requires significant capital for hospitals + regulatory navigation in healthcare. The tech layer alone is copyable, but the full-stack model needs deep pockets.",
-        "alternativeApproach": "Build the software layer only - telemedicine platform for emerging markets. Let others handle the physical infrastructure."
-      },
-      "articleUrl": "https://techstartups.com/2026/01/06/top-startup-and-tech-funding-news-january-6-2025/",
-      "companyUrl": "https://even.in",
-      "datePublished": "2026-01-06",
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "funded-003",
-      "source": "techstartups",
-      "companyName": "VelaFi",
-      "description": "Enterprise stablecoin payments infrastructure enabling businesses to send, receive, and manage stablecoin transactions at scale.",
-      "fundingRound": "Series B",
-      "amountRaised": 20000000,
-      "currency": "USD",
-      "investors": [
-        { "name": "Not disclosed", "type": "VC" }
-      ],
-      "companyType": "Fintech",
-      "industry": "Payments / Crypto",
-      "location": "USA",
-      "region": "North America",
-      "whyFunded": [
-        "Stablecoins becoming mainstream payment rail",
-        "Enterprise focus = higher margins than consumer",
-        "Regulatory clarity improving for crypto payments"
-      ],
-      "usps": [
-        "Enterprise-grade stablecoin treasury",
-        "Multi-chain payment rails",
-        "Compliance-first architecture"
-      ],
-      "analysis": {
-        "copyabilityScore": 3,
-        "verdict": "MEDIUM - REGULATORY MOAT",
-        "reasoning": "The tech is buildable, but regulatory licenses (money transmission) create a real barrier. First-movers who get licensed have an advantage.",
-        "alternativeApproach": "Build stablecoin tools for specific verticals (freelancers, cross-border payroll) that don't require full money transmission licenses."
-      },
-      "articleUrl": "https://techstartups.com/2026/01/12/top-startup-and-tech-funding-news-january-12-2025/",
-      "companyUrl": "https://velafi.com",
-      "datePublished": "2026-01-12",
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "funded-004",
-      "source": "techstartups",
       "companyName": "Parloa",
       "description": "AI-powered contact center automation platform. Enterprise conversational AI for customer service at scale.",
       "fundingRound": "Series D",
       "amountRaised": 350000000,
       "currency": "USD",
-      "investors": [
-        { "name": "Not disclosed", "type": "VC" }
-      ],
+      "investors": [{ "name": "Altimeter Capital", "type": "VC", "lead": true }],
       "companyType": "AI / Enterprise",
       "industry": "Customer Service",
       "location": "Berlin, Germany",
       "region": "Europe",
-      "whyFunded": [
-        "Contact centers are $400B+ market ripe for AI disruption",
-        "Proven enterprise traction (valuation tripled to $3B)",
-        "AI agents replacing human agents at scale"
-      ],
-      "usps": [
-        "Enterprise-grade AI voice agents",
-        "Multi-language support",
-        "Deep integrations with contact center platforms"
-      ],
+      "whyFunded": ["Contact centers are $400B+ market", "AI agents replacing human agents at scale"],
+      "usps": ["Enterprise-grade AI voice agents", "Multi-language support"],
       "analysis": {
         "copyabilityScore": 2,
         "verdict": "HARD - BUT VERTICAL NICHES AVAILABLE",
-        "reasoning": "$350M raised means they're well-capitalized to dominate enterprise. However, they can't serve every vertical equally well.",
-        "alternativeApproach": "Build AI voice agents for specific verticals they won't prioritize: restaurants, dental offices, real estate. Niche down hard."
+        "reasoning": "$350M raised means they're well-capitalized to dominate enterprise.",
+        "alternativeApproach": "Build AI voice agents for specific verticals: restaurants, dental offices, real estate."
       },
-      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
-      "companyUrl": "https://parloa.com",
+      "articleUrl": "https://techcrunch.com/2026/01/14/",
       "datePublished": "2026-01-14",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-003",
+      "source": "techcrunch",
+      "companyName": "Anthropic",
+      "description": "AI safety company building reliable, interpretable AI systems. Creator of Claude AI assistant.",
+      "fundingRound": "Series E",
+      "amountRaised": 2000000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Google", "type": "Strategic", "lead": true },
+        { "name": "Spark Capital", "type": "VC" }
+      ],
+      "companyType": "AI Infrastructure",
+      "industry": "AI / ML",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Leading AI safety research", "Claude competitive with GPT-4"],
+      "usps": ["Constitutional AI approach", "Enterprise-focused AI"],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE TO COPY",
+        "reasoning": "Requires billions in compute and top AI researchers.",
+        "alternativeApproach": "Build applications ON TOP of their API instead."
+      },
+      "articleUrl": "https://techcrunch.com/2025/12/",
+      "datePublished": "2025-12-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-004",
+      "source": "techcrunch",
+      "companyName": "Perplexity",
+      "description": "AI-powered answer engine that provides direct answers with citations instead of links.",
+      "fundingRound": "Series B",
+      "amountRaised": 520000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "IVP", "type": "VC", "lead": true },
+        { "name": "NEA", "type": "VC" },
+        { "name": "Jeff Bezos", "type": "Angel" }
+      ],
+      "companyType": "AI / Search",
+      "industry": "AI / ML",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Disrupting Google search", "Strong user growth"],
+      "usps": ["AI-native search", "Citation-based answers"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - REQUIRES SCALE",
+        "reasoning": "Search requires massive infrastructure and user base.",
+        "alternativeApproach": "Build vertical-specific AI search: legal research, medical literature, code search."
+      },
+      "articleUrl": "https://techcrunch.com/2025/12/",
+      "datePublished": "2025-12-01",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-005",
-      "source": "techstartups",
-      "companyName": "Tebra",
-      "description": "Healthcare practice management platform embedding AI across medical practices for scheduling, billing, and patient engagement.",
-      "fundingRound": "Growth",
-      "amountRaised": 250000000,
+      "source": "techcrunch",
+      "companyName": "Cursor",
+      "description": "AI-powered code editor built from the ground up for AI-assisted programming.",
+      "fundingRound": "Series A",
+      "amountRaised": 60000000,
       "currency": "USD",
       "investors": [
-        { "name": "Not disclosed", "type": "PE" }
+        { "name": "a16z", "type": "VC", "lead": true },
+        { "name": "OpenAI", "type": "Strategic" }
       ],
-      "companyType": "HealthTech",
-      "industry": "Healthcare SaaS",
-      "location": "USA",
+      "companyType": "DevTools",
+      "industry": "Developer Tools",
+      "location": "San Francisco, USA",
       "region": "North America",
-      "whyFunded": [
-        "Healthcare practices desperate for efficiency gains",
-        "AI automation reducing admin burden by 40%+",
-        "Sticky SaaS with high switching costs"
-      ],
-      "usps": [
-        "All-in-one practice management",
-        "AI-powered scheduling optimization",
-        "Automated patient communications"
-      ],
+      "whyFunded": ["AI coding tools exploding", "Developers love the UX"],
+      "usps": ["AI-native editor", "Context-aware completions"],
       "analysis": {
-        "copyabilityScore": 2,
-        "verdict": "HARD - ESTABLISHED PLAYER",
-        "reasoning": "$250M raised indicates they're a market leader. Competing head-on is tough. Healthcare sales cycles are 12-18 months.",
-        "alternativeApproach": "Build AI add-ons that integrate WITH Tebra and similar platforms. Become a feature, not a competitor."
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - UX DIFFERENTIATION",
+        "reasoning": "The core tech is available via APIs. The UX and integrations are the moat.",
+        "alternativeApproach": "Build AI coding tools for specific languages or frameworks not well served."
       },
-      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
-      "companyUrl": "https://tebra.com",
-      "datePublished": "2026-01-14",
+      "articleUrl": "https://techcrunch.com/2025/11/",
+      "datePublished": "2025-11-15",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-006",
-      "source": "techstartups",
-      "companyName": "Cast AI",
-      "description": "Cloud cost optimization platform with new OMNI Compute feature unifying GPU capacity across multiple cloud providers.",
-      "fundingRound": "Growth",
-      "amountRaised": 50000000,
+      "source": "sifted",
+      "companyName": "Mistral AI",
+      "description": "European AI lab building open-weight large language models competitive with closed models.",
+      "fundingRound": "Series B",
+      "amountRaised": 640000000,
       "currency": "USD",
       "investors": [
-        { "name": "Not disclosed", "type": "VC" }
+        { "name": "General Catalyst", "type": "VC", "lead": true },
+        { "name": "a16z", "type": "VC" }
       ],
-      "companyType": "DevOps / Cloud",
-      "industry": "Cloud Infrastructure",
-      "location": "USA",
-      "region": "North America",
-      "whyFunded": [
-        "GPU costs are #1 pain point for AI companies",
-        "Multi-cloud is becoming standard",
-        "Proven ROI - customers save 50%+ on cloud bills"
-      ],
-      "usps": [
-        "Automated cloud cost optimization",
-        "Multi-cloud GPU orchestration",
-        "Kubernetes-native architecture"
-      ],
+      "companyType": "AI Infrastructure",
+      "industry": "AI / ML",
+      "location": "Paris, France",
+      "region": "Europe",
+      "whyFunded": ["European AI sovereignty", "Open-weight model leader"],
+      "usps": ["Open-weight models", "European data compliance"],
       "analysis": {
-        "copyabilityScore": 3,
-        "verdict": "MEDIUM - CROWDED BUT GROWING",
-        "reasoning": "Cloud cost optimization is a competitive space (Spot, Zesty, etc.), but market is huge and growing. There's room for focused players.",
-        "alternativeApproach": "Build cost optimization for a specific stack: Vercel users, Supabase users, specific frameworks. Niche positioning wins."
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE TO COPY",
+        "reasoning": "Training frontier models requires $100M+ and top talent.",
+        "alternativeApproach": "Fine-tune their open models for specific verticals."
       },
-      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
-      "companyUrl": "https://cast.ai",
-      "datePublished": "2026-01-14",
+      "articleUrl": "https://sifted.eu/2025/11/",
+      "datePublished": "2025-11-01",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-007",
-      "source": "techstartups",
-      "companyName": "Alpaca",
-      "description": "Brokerage API infrastructure enabling fintechs to embed stock and crypto trading into their apps.",
-      "fundingRound": "Series C",
-      "amountRaised": 150000000,
+      "source": "techcrunch",
+      "companyName": "Wiz",
+      "description": "Cloud security platform providing agentless visibility into cloud infrastructure risks.",
+      "fundingRound": "Series E",
+      "amountRaised": 1000000000,
       "currency": "USD",
       "investors": [
-        { "name": "Not disclosed", "type": "VC" }
+        { "name": "Andreessen Horowitz", "type": "VC", "lead": true },
+        { "name": "Lightspeed", "type": "VC" }
       ],
-      "companyType": "Fintech",
-      "industry": "Trading Infrastructure",
-      "location": "USA",
+      "companyType": "Cybersecurity",
+      "industry": "Cloud Security",
+      "location": "New York, USA",
       "region": "North America",
-      "whyFunded": [
-        "Embedded finance is exploding",
-        "Every fintech wants to offer trading",
-        "API-first approach = easy integration"
-      ],
-      "usps": [
-        "Commission-free trading API",
-        "Multi-asset support (stocks, crypto)",
-        "White-label brokerage infrastructure"
-      ],
+      "whyFunded": ["Cloud security is critical", "$12B valuation"],
+      "usps": ["Agentless scanning", "Graph-based risk analysis"],
       "analysis": {
-        "copyabilityScore": 1,
-        "verdict": "VERY HARD - REGULATORY FORTRESS",
-        "reasoning": "Brokerage licenses take years and millions to obtain. Alpaca already has them. This is a regulated infrastructure play - not for copying.",
-        "alternativeApproach": "Build ON TOP of Alpaca's API. Create vertical trading apps (for doctors, for teachers, for specific communities) using their infrastructure."
+        "copyabilityScore": 2,
+        "verdict": "HARD - MARKET LEADER",
+        "reasoning": "Wiz dominates cloud security. Hard to compete head-on.",
+        "alternativeApproach": "Build security tools for specific clouds or compliance frameworks."
       },
-      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
-      "companyUrl": "https://alpaca.markets",
-      "datePublished": "2026-01-14",
+      "articleUrl": "https://techcrunch.com/2025/10/",
+      "datePublished": "2025-10-20",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-008",
-      "source": "techstartups",
-      "companyName": "Tucuvi",
-      "description": "AI-powered clinical voice assistant for healthcare. Automates patient follow-up calls and clinical data collection.",
-      "fundingRound": "Series A",
-      "amountRaised": 20000000,
+      "source": "techcrunch",
+      "companyName": "Stripe",
+      "description": "Payment processing infrastructure for internet businesses. Global financial infrastructure.",
+      "fundingRound": "Series I",
+      "amountRaised": 694000000,
       "currency": "USD",
       "investors": [
-        { "name": "Frontline Ventures", "type": "VC", "lead": true },
-        { "name": "Seaya Ventures", "type": "VC" },
-        { "name": "KFund", "type": "VC" }
+        { "name": "Sequoia", "type": "VC", "lead": true },
+        { "name": "Goldman Sachs", "type": "Strategic" }
       ],
-      "companyType": "HealthTech / AI",
-      "industry": "Healthcare",
-      "location": "Spain",
-      "region": "Europe",
-      "whyFunded": [
-        "Clinical staff shortages are critical",
-        "AI voice can handle 80% of routine follow-ups",
-        "European healthcare market is underserved by tech"
-      ],
-      "usps": [
-        "Medical-grade conversational AI",
-        "Multi-language clinical support",
-        "EHR integration"
-      ],
+      "companyType": "Fintech",
+      "industry": "Payments",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Payment infrastructure is essential", "$50B valuation"],
+      "usps": ["Developer-first APIs", "Global payment rails"],
       "analysis": {
-        "copyabilityScore": 3,
-        "verdict": "MEDIUM - REGIONAL OPPORTUNITY",
-        "reasoning": "Healthcare AI voice is hot. Tucuvi is focused on Europe/Spain. Other regions are open. The tech is buildable with modern AI tools.",
-        "alternativeApproach": "Build similar solution for US market, or focus on specific conditions (diabetes management, post-surgery follow-up, mental health check-ins)."
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE TO COPY",
+        "reasoning": "Payment infrastructure requires years of regulatory work.",
+        "alternativeApproach": "Build specialized payment tools on top of Stripe's infrastructure."
       },
-      "articleUrl": "https://www.seedtable.com/funding-rounds/recent",
-      "companyUrl": "https://tucuvi.com",
-      "datePublished": "2026-01-15",
+      "articleUrl": "https://techcrunch.com/2025/10/",
+      "datePublished": "2025-10-01",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-009",
-      "source": "techstartups",
-      "companyName": "Mindsite",
-      "description": "AI-powered mental health platform providing personalized therapy recommendations and progress tracking.",
-      "fundingRound": "Seed",
-      "amountRaised": 2800000,
+      "source": "techcrunch",
+      "companyName": "ElevenLabs",
+      "description": "AI voice synthesis platform for realistic text-to-speech and voice cloning.",
+      "fundingRound": "Series B",
+      "amountRaised": 80000000,
       "currency": "USD",
       "investors": [
-        { "name": "Not disclosed", "type": "VC" }
+        { "name": "Andreessen Horowitz", "type": "VC", "lead": true },
+        { "name": "Sequoia", "type": "VC" }
       ],
-      "companyType": "HealthTech",
-      "industry": "Mental Health",
-      "location": "Europe",
-      "region": "Europe",
-      "whyFunded": [
-        "Mental health crisis post-pandemic",
-        "Therapist shortage creates opportunity for AI augmentation",
-        "B2B2C model through employers"
-      ],
-      "usps": [
-        "AI-matched therapy recommendations",
-        "Progress tracking and analytics",
-        "Employer wellness integration"
-      ],
+      "companyType": "AI / Media",
+      "industry": "AI / ML",
+      "location": "New York, USA",
+      "region": "North America",
+      "whyFunded": ["Voice AI is huge market", "Best-in-class quality"],
+      "usps": ["Ultra-realistic voice synthesis", "Voice cloning"],
       "analysis": {
-        "copyabilityScore": 4,
-        "verdict": "COPYABLE - HOT SPACE",
-        "reasoning": "Mental health tech is crowded but massive. $2.8M seed means they're early. Many angles still open.",
-        "alternativeApproach": "Focus on underserved segments: teens, seniors, specific professions (healthcare workers, teachers). Or go B2B2C through specific employer verticals."
+        "copyabilityScore": 2,
+        "verdict": "HARD - QUALITY MOAT",
+        "reasoning": "Voice quality is hard to match. They have the best models.",
+        "alternativeApproach": "Build voice applications using their API for specific use cases."
       },
-      "articleUrl": "https://www.seedtable.com/funding-rounds/recent",
-      "companyUrl": "https://mindsite.com",
-      "datePublished": "2026-01-10",
+      "articleUrl": "https://techcrunch.com/2025/09/",
+      "datePublished": "2025-09-15",
       "dateAdded": "2026-01-20"
     },
     {
       "id": "funded-010",
-      "source": "techstartups",
-      "companyName": "LMArena",
-      "description": "Crowdsourced AI benchmarking platform. Community-driven evaluation of LLMs through blind comparisons.",
-      "fundingRound": "Series A",
+      "source": "techcrunch",
+      "companyName": "Notion",
+      "description": "All-in-one workspace for notes, docs, wikis, and project management with AI features.",
+      "fundingRound": "Series C",
       "amountRaised": 150000000,
       "currency": "USD",
       "investors": [
-        { "name": "Not disclosed", "type": "VC" }
+        { "name": "Coatue Management", "type": "VC", "lead": true }
       ],
-      "companyType": "AI Infrastructure",
-      "industry": "AI / DevTools",
-      "location": "USA",
+      "companyType": "Productivity",
+      "industry": "SaaS",
+      "location": "San Francisco, USA",
       "region": "North America",
-      "whyFunded": [
-        "AI model evaluation is critical as models proliferate",
-        "Community/crowdsourced approach creates network effects",
-        "Trusted neutral benchmark in fragmented market"
+      "whyFunded": ["Productivity tools are sticky", "AI features driving growth"],
+      "usps": ["Flexible workspace", "Notion AI assistant"],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - NETWORK EFFECTS",
+        "reasoning": "The product is copyable but user habits and templates create lock-in.",
+        "alternativeApproach": "Build Notion alternatives for specific verticals: legal, healthcare, engineering."
+      },
+      "articleUrl": "https://techcrunch.com/2025/09/",
+      "datePublished": "2025-09-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-011",
+      "source": "sifted",
+      "companyName": "Monzo",
+      "description": "UK digital bank offering mobile-first banking with smart budgeting features.",
+      "fundingRound": "Series H",
+      "amountRaised": 430000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "CapitalG", "type": "VC", "lead": true }
       ],
-      "usps": [
-        "Crowdsourced blind LLM comparisons",
-        "Real human preferences, not synthetic benchmarks",
-        "Industry-standard leaderboard"
+      "companyType": "Fintech",
+      "industry": "Banking",
+      "location": "London, UK",
+      "region": "Europe",
+      "whyFunded": ["Path to profitability", "9M+ customers"],
+      "usps": ["Mobile-first banking", "Instant notifications"],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE - BANKING LICENSE",
+        "reasoning": "Banking licenses take years. Monzo is established.",
+        "alternativeApproach": "Build fintech tools that integrate with neobanks."
+      },
+      "articleUrl": "https://sifted.eu/2025/08/",
+      "datePublished": "2025-08-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-012",
+      "source": "techcrunch",
+      "companyName": "Synthesia",
+      "description": "AI video generation platform creating realistic videos from text with AI avatars.",
+      "fundingRound": "Series D",
+      "amountRaised": 90000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Accel", "type": "VC", "lead": true },
+        { "name": "NVIDIA", "type": "Strategic" }
       ],
+      "companyType": "AI / Media",
+      "industry": "AI / ML",
+      "location": "London, UK",
+      "region": "Europe",
+      "whyFunded": ["Video content demand is massive", "Enterprise adoption"],
+      "usps": ["AI avatars", "Instant video creation"],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - FAST-MOVING SPACE",
+        "reasoning": "AI video is competitive. New entrants like HeyGen, D-ID.",
+        "alternativeApproach": "Build AI video for specific use cases: real estate, e-commerce, education."
+      },
+      "articleUrl": "https://techcrunch.com/2025/08/",
+      "datePublished": "2025-08-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-013",
+      "source": "techcrunch",
+      "companyName": "Linear",
+      "description": "Modern issue tracking and project management tool for software teams.",
+      "fundingRound": "Series B",
+      "amountRaised": 35000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Accel", "type": "VC", "lead": true }
+      ],
+      "companyType": "DevTools",
+      "industry": "Developer Tools",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Developers hate Jira", "Best-in-class UX"],
+      "usps": ["Fast and beautiful UI", "Keyboard-first design"],
+      "analysis": {
+        "copyabilityScore": 4,
+        "verdict": "COPYABLE - BUT UX IS HARD",
+        "reasoning": "Issue tracking is commoditized. Linear wins on UX polish.",
+        "alternativeApproach": "Build issue tracking for non-dev teams: design, marketing, legal."
+      },
+      "articleUrl": "https://techcrunch.com/2025/07/",
+      "datePublished": "2025-07-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-014",
+      "source": "techcrunch",
+      "companyName": "Vercel",
+      "description": "Frontend cloud platform for deploying and hosting web applications.",
+      "fundingRound": "Series D",
+      "amountRaised": 250000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Accel", "type": "VC", "lead": true },
+        { "name": "GV", "type": "VC" }
+      ],
+      "companyType": "DevTools",
+      "industry": "Developer Tools",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Frontend deployment is critical", "Next.js ecosystem"],
+      "usps": ["Zero-config deployments", "Edge network"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - ECOSYSTEM MOAT",
+        "reasoning": "Vercel owns Next.js. Framework + hosting combo is powerful.",
+        "alternativeApproach": "Build specialized hosting for other frameworks or regions."
+      },
+      "articleUrl": "https://techcrunch.com/2025/07/",
+      "datePublished": "2025-07-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-015",
+      "source": "techcrunch",
+      "companyName": "Figma",
+      "description": "Collaborative design platform for UI/UX design teams.",
+      "fundingRound": "Series E",
+      "amountRaised": 200000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "a16z", "type": "VC", "lead": true }
+      ],
+      "companyType": "Design Tools",
+      "industry": "SaaS",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Design collaboration is essential", "AI features"],
+      "usps": ["Real-time collaboration", "Web-based design"],
       "analysis": {
         "copyabilityScore": 2,
         "verdict": "HARD - NETWORK EFFECTS",
-        "reasoning": "$150M means they're well-funded to maintain leadership. The community/network effect is hard to replicate.",
-        "alternativeApproach": "Build domain-specific LLM benchmarks: legal AI accuracy, medical AI safety, code generation quality. Niche benchmarks have value."
+        "reasoning": "Designers are locked into Figma. Switching costs are high.",
+        "alternativeApproach": "Build Figma plugins or complementary tools."
       },
-      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
-      "companyUrl": "https://lmarena.ai",
-      "datePublished": "2026-01-14",
+      "articleUrl": "https://techcrunch.com/2025/06/",
+      "datePublished": "2025-06-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-016",
+      "source": "techcrunch",
+      "companyName": "Rippling",
+      "description": "Unified HR, IT, and finance platform for workforce management.",
+      "fundingRound": "Series E",
+      "amountRaised": 500000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Kleiner Perkins", "type": "VC", "lead": true }
+      ],
+      "companyType": "HR Tech",
+      "industry": "SaaS",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["HR software is sticky", "All-in-one approach"],
+      "usps": ["Unified employee system", "Automated onboarding"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - INTEGRATION COMPLEXITY",
+        "reasoning": "HR/IT/Finance integration is complex. Years of work.",
+        "alternativeApproach": "Build HR tools for specific company sizes or regions."
+      },
+      "articleUrl": "https://techcrunch.com/2025/06/",
+      "datePublished": "2025-06-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-017",
+      "source": "sifted",
+      "companyName": "Bolt",
+      "description": "European ride-hailing and food delivery super-app.",
+      "fundingRound": "Series F",
+      "amountRaised": 220000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Sequoia", "type": "VC", "lead": true }
+      ],
+      "companyType": "Mobility",
+      "industry": "Transportation",
+      "location": "Tallinn, Estonia",
+      "region": "Europe",
+      "whyFunded": ["Uber competitor in Europe", "Profitable unit economics"],
+      "usps": ["Lower fees than Uber", "Multi-service app"],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE - CAPITAL INTENSIVE",
+        "reasoning": "Ride-hailing requires massive capital and regulatory work.",
+        "alternativeApproach": "Build tools for gig drivers or fleet management."
+      },
+      "articleUrl": "https://sifted.eu/2025/05/",
+      "datePublished": "2025-05-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-018",
+      "source": "techcrunch",
+      "companyName": "Canva",
+      "description": "Online design platform making graphic design accessible to everyone.",
+      "fundingRound": "Secondary",
+      "amountRaised": 300000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "T. Rowe Price", "type": "PE", "lead": true }
+      ],
+      "companyType": "Design Tools",
+      "industry": "SaaS",
+      "location": "Sydney, Australia",
+      "region": "Asia Pacific",
+      "whyFunded": ["Design democratization", "40B valuation"],
+      "usps": ["Easy to use", "Massive template library"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - BRAND AND SCALE",
+        "reasoning": "Canva has massive brand recognition and content library.",
+        "alternativeApproach": "Build design tools for specific formats or industries."
+      },
+      "articleUrl": "https://techcrunch.com/2025/05/",
+      "datePublished": "2025-05-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-019",
+      "source": "techcrunch",
+      "companyName": "Ramp",
+      "description": "Corporate card and spend management platform with AI-powered expense tracking.",
+      "fundingRound": "Series D",
+      "amountRaised": 300000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Founders Fund", "type": "VC", "lead": true }
+      ],
+      "companyType": "Fintech",
+      "industry": "Expense Management",
+      "location": "New York, USA",
+      "region": "North America",
+      "whyFunded": ["Corporate spend is huge market", "AI automation"],
+      "usps": ["AI-powered savings", "Real-time expense tracking"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - CARD ISSUANCE",
+        "reasoning": "Issuing corporate cards requires banking partnerships.",
+        "alternativeApproach": "Build expense management add-ons or integrations."
+      },
+      "articleUrl": "https://techcrunch.com/2025/04/",
+      "datePublished": "2025-04-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-020",
+      "source": "techcrunch",
+      "companyName": "Airtable",
+      "description": "Low-code platform combining spreadsheets with database functionality.",
+      "fundingRound": "Series F",
+      "amountRaised": 270000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Thrive Capital", "type": "VC", "lead": true }
+      ],
+      "companyType": "Productivity",
+      "industry": "SaaS",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Low-code is growing", "Enterprise adoption"],
+      "usps": ["Flexible data modeling", "Automations"],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - CROWDED SPACE",
+        "reasoning": "Many alternatives exist. Differentiation is hard.",
+        "alternativeApproach": "Build Airtable templates/apps for specific workflows."
+      },
+      "articleUrl": "https://techcrunch.com/2025/04/",
+      "datePublished": "2025-04-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-021",
+      "source": "techcrunch",
+      "companyName": "Databricks",
+      "description": "Unified data analytics platform combining data warehouse and data lake.",
+      "fundingRound": "Series I",
+      "amountRaised": 500000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "a16z", "type": "VC", "lead": true }
+      ],
+      "companyType": "Data Infrastructure",
+      "industry": "Data / Analytics",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Data is the new oil", "AI/ML workloads"],
+      "usps": ["Lakehouse architecture", "Spark optimization"],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE - SCALE REQUIRED",
+        "reasoning": "Data infrastructure requires massive engineering investment.",
+        "alternativeApproach": "Build tools and connectors for Databricks ecosystem."
+      },
+      "articleUrl": "https://techcrunch.com/2025/03/",
+      "datePublished": "2025-03-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-022",
+      "source": "techcrunch",
+      "companyName": "Zapier",
+      "description": "No-code automation platform connecting 6,000+ apps.",
+      "fundingRound": "Secondary",
+      "amountRaised": 159000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Sequoia", "type": "VC", "lead": true }
+      ],
+      "companyType": "Automation",
+      "industry": "SaaS",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Automation demand is huge", "Profitable business"],
+      "usps": ["6000+ app integrations", "No-code friendly"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - INTEGRATION MOAT",
+        "reasoning": "Building 6000+ integrations takes years.",
+        "alternativeApproach": "Build deep integrations for specific app ecosystems."
+      },
+      "articleUrl": "https://techcrunch.com/2025/03/",
+      "datePublished": "2025-03-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-023",
+      "source": "sifted",
+      "companyName": "Revolut",
+      "description": "Global neobank offering banking, crypto, and stock trading.",
+      "fundingRound": "Series E",
+      "amountRaised": 800000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Coatue", "type": "VC", "lead": true },
+        { "name": "Tiger Global", "type": "VC" }
+      ],
+      "companyType": "Fintech",
+      "industry": "Banking",
+      "location": "London, UK",
+      "region": "Europe",
+      "whyFunded": ["45M customers globally", "Path to profitability"],
+      "usps": ["Multi-currency accounts", "Crypto trading"],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE - BANKING LICENSE",
+        "reasoning": "Neobanking requires multiple licenses across regions.",
+        "alternativeApproach": "Build fintech features that integrate with Revolut."
+      },
+      "articleUrl": "https://sifted.eu/2025/02/",
+      "datePublished": "2025-02-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-024",
+      "source": "techcrunch",
+      "companyName": "Retool",
+      "description": "Low-code platform for building internal tools and admin panels.",
+      "fundingRound": "Series C",
+      "amountRaised": 75000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Sequoia", "type": "VC", "lead": true }
+      ],
+      "companyType": "DevTools",
+      "industry": "Developer Tools",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Internal tools market is huge", "Developer-friendly"],
+      "usps": ["Drag-and-drop builder", "Database integrations"],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - ALTERNATIVES EXIST",
+        "reasoning": "Low-code internal tools space is competitive.",
+        "alternativeApproach": "Build internal tool templates for specific industries."
+      },
+      "articleUrl": "https://techcrunch.com/2025/02/",
+      "datePublished": "2025-02-01",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-025",
+      "source": "techcrunch",
+      "companyName": "Supabase",
+      "description": "Open-source Firebase alternative with Postgres database.",
+      "fundingRound": "Series C",
+      "amountRaised": 80000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Felicis", "type": "VC", "lead": true }
+      ],
+      "companyType": "DevTools",
+      "industry": "Developer Tools",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Firebase alternative demand", "Open-source community"],
+      "usps": ["Postgres foundation", "Real-time subscriptions"],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - OPEN SOURCE MOAT",
+        "reasoning": "Open-source creates community but also competition.",
+        "alternativeApproach": "Build Supabase extensions or managed hosting alternatives."
+      },
+      "articleUrl": "https://techcrunch.com/2025/01/",
+      "datePublished": "2025-01-20",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-026",
+      "source": "techcrunch",
+      "companyName": "Runway",
+      "description": "AI-powered video editing and generation platform for creative professionals.",
+      "fundingRound": "Series C",
+      "amountRaised": 141000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Google", "type": "Strategic", "lead": true }
+      ],
+      "companyType": "AI / Media",
+      "industry": "AI / ML",
+      "location": "New York, USA",
+      "region": "North America",
+      "whyFunded": ["AI video is the future", "Creative tool leader"],
+      "usps": ["Gen-2 video model", "Professional integrations"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - MODEL QUALITY",
+        "reasoning": "Video generation models require significant R&D.",
+        "alternativeApproach": "Build video editing workflows using Runway's API."
+      },
+      "articleUrl": "https://techcrunch.com/2025/01/",
+      "datePublished": "2025-01-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-027",
+      "source": "techcrunch",
+      "companyName": "Cal.com",
+      "description": "Open-source Calendly alternative for scheduling meetings.",
+      "fundingRound": "Series A",
+      "amountRaised": 25000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Seven Seven Six", "type": "VC", "lead": true }
+      ],
+      "companyType": "Productivity",
+      "industry": "SaaS",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Scheduling is ubiquitous", "Open-source momentum"],
+      "usps": ["Open-source", "Self-hostable"],
+      "analysis": {
+        "copyabilityScore": 5,
+        "verdict": "EASY TO COPY",
+        "reasoning": "Scheduling is a solved problem. Differentiation is hard.",
+        "alternativeApproach": "Build scheduling for specific verticals: healthcare, legal, sales."
+      },
+      "articleUrl": "https://techcrunch.com/2025/01/",
+      "datePublished": "2025-01-10",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-028",
+      "source": "techcrunch",
+      "companyName": "Descript",
+      "description": "AI-powered video and podcast editing platform with text-based editing.",
+      "fundingRound": "Series C",
+      "amountRaised": 50000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "OpenAI", "type": "Strategic", "lead": true }
+      ],
+      "companyType": "AI / Media",
+      "industry": "AI / ML",
+      "location": "San Francisco, USA",
+      "region": "North America",
+      "whyFunded": ["Content creation exploding", "Unique editing paradigm"],
+      "usps": ["Edit video like text", "AI voice cloning"],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - UX INNOVATION",
+        "reasoning": "The text-based editing paradigm is novel but replicable.",
+        "alternativeApproach": "Build podcast/video tools for specific creator niches."
+      },
+      "articleUrl": "https://techcrunch.com/2025/01/",
+      "datePublished": "2025-01-05",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-029",
+      "source": "sifted",
+      "companyName": "Klarna",
+      "description": "Buy now, pay later platform and shopping assistant.",
+      "fundingRound": "Series E",
+      "amountRaised": 1000000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Silver Lake", "type": "PE", "lead": true }
+      ],
+      "companyType": "Fintech",
+      "industry": "Payments",
+      "location": "Stockholm, Sweden",
+      "region": "Europe",
+      "whyFunded": ["BNPL market leader", "IPO preparation"],
+      "usps": ["Smooth checkout", "AI shopping assistant"],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "IMPOSSIBLE - SCALE AND REGULATION",
+        "reasoning": "BNPL requires credit licenses and merchant partnerships.",
+        "alternativeApproach": "Build merchant tools that integrate with Klarna."
+      },
+      "articleUrl": "https://sifted.eu/2025/01/",
+      "datePublished": "2025-01-08",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-030",
+      "source": "techcrunch",
+      "companyName": "Glean",
+      "description": "Enterprise AI search platform that indexes all company data.",
+      "fundingRound": "Series D",
+      "amountRaised": 200000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Kleiner Perkins", "type": "VC", "lead": true }
+      ],
+      "companyType": "AI / Enterprise",
+      "industry": "AI / ML",
+      "location": "Palo Alto, USA",
+      "region": "North America",
+      "whyFunded": ["Enterprise search is broken", "AI-native approach"],
+      "usps": ["Unified enterprise search", "Permission-aware"],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - ENTERPRISE SALES",
+        "reasoning": "Enterprise sales cycles are long. Glean has momentum.",
+        "alternativeApproach": "Build department-specific search: engineering docs, sales content."
+      },
+      "articleUrl": "https://techcrunch.com/2025/01/",
+      "datePublished": "2025-01-02",
       "dateAdded": "2026-01-20"
     }
   ],
-  "stages": ["Pre-seed", "Seed", "Series A", "Series B", "Series C", "Series D", "Growth"],
-  "industries": ["AI / Enterprise", "Fintech", "HealthTech", "Cybersecurity", "Cloud Infrastructure", "AI Infrastructure", "DevTools"]
+  "stages": ["Pre-seed", "Seed", "Series A", "Series B", "Series C", "Series D", "Series E", "Growth", "Secondary"],
+  "industries": ["AI / ML", "Fintech", "Healthcare", "Developer Tools", "SaaS", "Cybersecurity", "Data / Analytics", "Payments", "Banking", "Transportation"]
 }

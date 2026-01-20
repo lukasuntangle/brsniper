@@ -352,7 +352,8 @@ async function main() {
   const existingUrls = new Set(data.startups.map(s => s.articleUrl));
   const newStartups = [];
   const today = new Date().toISOString().split('T')[0];
-  const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
+  // Lookback to Jan 1, 2025
+  const lookbackDate = new Date('2025-01-01').getTime();
 
   // Fetch from all sources
   for (const source of FUNDING_SOURCES) {
@@ -373,8 +374,8 @@ async function main() {
           continue;
         }
 
-        // Skip if older than 30 days
-        if (item.pubDate.getTime() < thirtyDaysAgo) {
+        // Skip if older than lookback date (Jan 1, 2025)
+        if (item.pubDate.getTime() < lookbackDate) {
           continue;
         }
 

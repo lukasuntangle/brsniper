@@ -82,9 +82,10 @@ class FundedStartups {
         });
 
         // Add event listeners
+        document.getElementById('date-filter').addEventListener('change', () => this.applyFilters());
+        document.getElementById('amount-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('stage-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('industry-filter').addEventListener('change', () => this.applyFilters());
-        document.getElementById('amount-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('copyability-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('sort-filter').addEventListener('change', () => this.applyFilters());
 
@@ -92,15 +93,30 @@ class FundedStartups {
     }
 
     applyFilters() {
+        const dateFilter = document.getElementById('date-filter').value;
+        const amountFilter = parseInt(document.getElementById('amount-filter').value);
         const stageFilter = document.getElementById('stage-filter').value;
         const industryFilter = document.getElementById('industry-filter').value;
-        const amountFilter = parseInt(document.getElementById('amount-filter').value);
         const copyabilityFilter = document.getElementById('copyability-filter').value;
         const sortFilter = document.getElementById('sort-filter').value;
 
         this.filteredStartups = this.data.startups.filter(startup => {
             // Source filter (from tabs)
             if (this.activeSource !== 'all' && startup.source !== this.activeSource) {
+                return false;
+            }
+
+            // Date filter
+            if (dateFilter !== 'all') {
+                const maxDays = parseInt(dateFilter);
+                const daysSincePublished = (Date.now() - new Date(startup.datePublished).getTime()) / (1000 * 60 * 60 * 24);
+                if (daysSincePublished > maxDays) {
+                    return false;
+                }
+            }
+
+            // Amount filter
+            if (amountFilter > 0 && startup.amountRaised < amountFilter) {
                 return false;
             }
 
@@ -114,23 +130,12 @@ class FundedStartups {
                 return false;
             }
 
-            // Amount filter (>$250K default)
-            if (startup.amountRaised < amountFilter) {
-                return false;
-            }
-
             // Copyability filter
             if (copyabilityFilter !== 'all') {
                 const minCopyability = parseInt(copyabilityFilter);
                 if (startup.analysis.copyabilityScore < minCopyability) {
                     return false;
                 }
-            }
-
-            // Only show last 30 days
-            const daysSincePublished = (Date.now() - new Date(startup.datePublished).getTime()) / (1000 * 60 * 60 * 24);
-            if (daysSincePublished > 30) {
-                return false;
             }
 
             return true;
