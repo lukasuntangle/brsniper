@@ -1,0 +1,11 @@
+{
+  "name": "brsniper",
+  "version": "1.0.0",
+  "description": "Online Business Acquisition Opportunities Tracker",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "start": "python3 -m http.server 3000"
+  },
+  "keywords": ["business", "acquisition", "startup", "saas", "ecommerce"],
+  "license": "MIT"
+}
