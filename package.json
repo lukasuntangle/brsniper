@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Online Business Acquisition Opportunities Tracker",
   "scripts": {
-    "dev": "python3 -m http.server 3000",
-    "start": "python3 -m http.server 3000"
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "fetch": "node scripts/fetch-listings.js",
+    "update": "npm run fetch"
   },
   "keywords": ["business", "acquisition", "startup", "saas", "ecommerce"],
   "license": "MIT"

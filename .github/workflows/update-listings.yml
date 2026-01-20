@@ -1,0 +1,88 @@
+name: Daily Listings Update
+
+on:
+  schedule:
+    # Run at 6:00 AM UTC every day
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-listings:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --ignore-scripts || true
+
+      - name: Fetch new listings from RSS feeds
+        run: node scripts/fetch-listings.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet data/listings.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changed
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/listings.json data/digest.json
+          git commit -m "Auto-update: New listings from RSS feeds [$(date +'%Y-%m-%d')]"
+          git push
+
+      - name: Create issue with digest
+        if: steps.changes.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const digest = JSON.parse(fs.readFileSync('data/digest.json', 'utf8'));
+
+            if (digest.newListings.length === 0 && digest.manualReviewLinks.length === 0) {
+              console.log('No new items to report');
+              return;
+            }
+
+            let body = '## Daily Listings Digest\n\n';
+            body += `**Date:** ${new Date().toISOString().split('T')[0]}\n\n`;
+
+            if (digest.newListings.length > 0) {
+              body += '### New Listings Added Automatically\n\n';
+              digest.newListings.forEach(l => {
+                body += `- **${l.title}** (${l.source}) - ${l.revenue || 'Revenue TBD'}\n`;
+              });
+              body += '\n';
+            }
+
+            body += '### Manual Review Needed\n\n';
+            body += 'Check these sources for new opportunities:\n\n';
+            digest.manualReviewLinks.forEach(link => {
+              body += `- [${link.name}](${link.url})\n`;
+            });
+
+            body += '\n---\n';
+            body += '_This issue was auto-generated. Close when reviewed._';
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📊 Daily Listings Digest - ${new Date().toISOString().split('T')[0]}`,
+              body: body,
+              labels: ['digest', 'automated']
+            });
