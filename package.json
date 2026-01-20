@@ -6,7 +6,9 @@
     "dev": "npx serve .",
     "start": "npx serve .",
     "fetch": "node scripts/fetch-listings.js",
-    "update": "npm run fetch"
+    "fetch:funded": "node scripts/fetch-funded-startups.js",
+    "update": "npm run fetch && npm run fetch:funded",
+    "test": "node tests/run-tests.js"
   },
   "keywords": ["business", "acquisition", "startup", "saas", "ecommerce"],
   "license": "MIT"

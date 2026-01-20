@@ -1,0 +1,342 @@
+/* Funded Startups Page Styles */
+
+.funded-hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+/* Startups Grid */
+.startups-section {
+    padding: 24px 0 60px;
+}
+
+.startups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 24px;
+}
+
+/* Startup Card */
+.startup-card {
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.startup-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.startup-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.startup-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.funding-round {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.amount-raised {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gem);
+}
+
+.startup-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.startup-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Metrics Row */
+.startup-metrics {
+    display: flex;
+    gap: 16px;
+    padding: 12px 20px;
+    background: var(--background);
+    flex-wrap: wrap;
+}
+
+.startup-metrics .metric {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+}
+
+.startup-metrics .metric-icon {
+    font-size: 1rem;
+}
+
+.startup-metrics .metric-value {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Section Label */
+.section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Investors */
+.startup-investors {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.investors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.investor {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #f1f5f9;
+    color: var(--text);
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.investor.lead {
+    background: var(--primary);
+    color: white;
+}
+
+/* Why Funded */
+.startup-why-funded {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.why-funded-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-funded-list li {
+    font-size: 0.85rem;
+    color: var(--text);
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.why-funded-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gem);
+    font-weight: bold;
+}
+
+/* USPs */
+.startup-usps {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.usps-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.usp-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #ecfdf5;
+    color: var(--gem);
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Analysis Section */
+.startup-analysis {
+    padding: 16px 20px;
+    margin: 12px;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.startup-analysis.copyability-easy {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 4px solid var(--gem);
+}
+
+.startup-analysis.copyability-medium {
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid var(--interesting);
+}
+
+.startup-analysis.copyability-hard {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid var(--skip);
+}
+
+.analysis-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.analysis-icon {
+    font-size: 1.1rem;
+}
+
+.analysis-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.copyability-badge {
+    margin-left: auto;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.copyability-easy .copyability-badge {
+    background: var(--gem);
+    color: white;
+}
+
+.copyability-medium .copyability-badge {
+    background: var(--interesting);
+    color: white;
+}
+
+.copyability-hard .copyability-badge {
+    background: var(--skip);
+    color: white;
+}
+
+.analysis-verdict {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.analysis-reasoning {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.alternative-approach {
+    font-size: 0.85rem;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    color: var(--text);
+}
+
+.alternative-approach strong {
+    color: var(--primary);
+}
+
+/* Footer */
+.startup-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background);
+    margin-top: auto;
+}
+
+.startup-source {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.startup-links {
+    display: flex;
+    gap: 12px;
+}
+
+.company-link,
+.article-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.company-link:hover,
+.article-link:hover {
+    text-decoration: underline;
+}
+
+.article-link {
+    padding: 6px 12px;
+    background: var(--text);
+    color: white;
+    border-radius: 6px;
+}
+
+.article-link:hover {
+    background: var(--primary);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .startups-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .startup-metrics {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .startup-footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

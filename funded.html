@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Sniper - Recently Funded Startups</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/funded.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>BR Sniper</h1>
+                    <span class="tagline">Online Business Acquisition Opportunities</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Acquisitions</a>
+                    <a href="funded.html" class="nav-link active">Funded Startups</a>
+                    <a href="#sources" class="nav-link">Sources</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero funded-hero">
+            <div class="container">
+                <h2>Recently Funded Startups</h2>
+                <p>Track what's getting funded. Find inspiration. Spot copyable ideas.</p>
+                <div class="stats-bar">
+                    <div class="stat">
+                        <span class="stat-number" id="total-startups">0</span>
+                        <span class="stat-label">Startups</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="total-raised">$0</span>
+                        <span class="stat-label">Total Raised</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="last-updated">-</span>
+                        <span class="stat-label">Last Updated</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="startups" class="startups-section">
+            <div class="container">
+                <!-- Source Tabs -->
+                <div class="source-tabs" id="source-tabs">
+                    <button class="source-tab active" data-source="all">
+                        <span class="tab-name">All Sources</span>
+                        <span class="tab-count" id="count-all">0</span>
+                    </button>
+                    <!-- Tabs populated by JS -->
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="stage-filter">Funding Stage</label>
+                        <select id="stage-filter">
+                            <option value="all">All Stages</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="industry-filter">Industry</label>
+                        <select id="industry-filter">
+                            <option value="all">All Industries</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="amount-filter">Min Raised</label>
+                        <select id="amount-filter">
+                            <option value="250000">$250K+</option>
+                            <option value="1000000">$1M+</option>
+                            <option value="5000000">$5M+</option>
+                            <option value="20000000">$20M+</option>
+                            <option value="100000000">$100M+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="copyability-filter">Copyability</label>
+                        <select id="copyability-filter">
+                            <option value="all">Any</option>
+                            <option value="4">Easy (4-5)</option>
+                            <option value="3">Medium (3+)</option>
+                            <option value="1">All incl. Hard</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-filter">Sort By</label>
+                        <select id="sort-filter">
+                            <option value="date">Most Recent</option>
+                            <option value="amount">Amount Raised</option>
+                            <option value="copyability">Copyability</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="startups-grid" id="startups-grid">
+                    <!-- Startups will be inserted here by JavaScript -->
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <p>No startups match your filters. Try adjusting your criteria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sources" class="sources-section">
+            <div class="container">
+                <h2>Data Sources</h2>
+                <p class="sources-intro">Funding news aggregated from top tech publications.</p>
+                <div class="sources-grid" id="sources-grid">
+                    <!-- Will be populated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BR Sniper. All information sourced from public news.</p>
+            <p class="disclaimer">Disclaimer: Funding data is aggregated from news sources. Always verify before making decisions.</p>
+        </div>
+    </footer>
+
+    <script src="js/funded.js"></script>
+</body>
+</html>

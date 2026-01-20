@@ -1,0 +1,407 @@
+{
+  "lastUpdated": "2026-01-20",
+  "sources": [
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/tag/funding/",
+      "rssUrl": "https://techcrunch.com/tag/funding/feed/",
+      "flag": "🇺🇸",
+      "description": "Global tech funding news"
+    },
+    {
+      "id": "sifted",
+      "name": "Sifted",
+      "url": "https://sifted.eu/sector/funding",
+      "rssUrl": "https://sifted.eu/feed/",
+      "flag": "🇪🇺",
+      "description": "European startup funding"
+    },
+    {
+      "id": "techeu",
+      "name": "Tech.eu",
+      "url": "https://tech.eu",
+      "rssUrl": "https://tech.eu/feed/",
+      "flag": "🇪🇺",
+      "description": "European tech news"
+    },
+    {
+      "id": "techstartups",
+      "name": "TechStartups",
+      "url": "https://techstartups.com",
+      "flag": "🌍",
+      "description": "Global startup news"
+    }
+  ],
+  "startups": [
+    {
+      "id": "funded-001",
+      "source": "techstartups",
+      "companyName": "Project Eleven",
+      "description": "Post-quantum cryptography startup securing blockchain and crypto infrastructure against future quantum computing threats.",
+      "fundingRound": "Series A",
+      "amountRaised": 20000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Castle Island Ventures", "type": "VC", "lead": true },
+        { "name": "Coinbase Ventures", "type": "VC" },
+        { "name": "Fin Capital", "type": "VC" },
+        { "name": "Variant", "type": "VC" },
+        { "name": "Quantonation", "type": "VC" },
+        { "name": "Balaji Srinivasan", "type": "Angel" }
+      ],
+      "companyType": "Cybersecurity",
+      "industry": "Crypto / Security",
+      "location": "USA",
+      "region": "North America",
+      "whyFunded": [
+        "First-mover in post-quantum crypto security",
+        "Quantum computing threat to current encryption is imminent",
+        "Strong investor roster including ex-Coinbase CTO"
+      ],
+      "usps": [
+        "Post-quantum cryptographic algorithms",
+        "Blockchain-native security solutions",
+        "Enterprise-ready quantum-safe infrastructure"
+      ],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "VERY HARD TO COPY",
+        "reasoning": "Requires deep cryptography expertise and PhD-level talent. This is cutting-edge research turned product. Not for the faint-hearted.",
+        "alternativeApproach": "Skip this space unless you have quantum computing background. Instead, watch for companies that will NEED this tech and build integrations."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/06/top-startup-and-tech-funding-news-january-6-2025/",
+      "companyUrl": "https://projecteleven.io",
+      "datePublished": "2026-01-06",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-002",
+      "source": "techstartups",
+      "companyName": "Even Healthcare",
+      "description": "Full-stack healthcare delivery combining 24/7 virtual care app with physical hospitals in India. Blending telemedicine with brick-and-mortar care.",
+      "fundingRound": "Series A",
+      "amountRaised": 20000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Catapult Ventures", "type": "VC", "lead": true }
+      ],
+      "companyType": "HealthTech",
+      "industry": "Healthcare",
+      "location": "India",
+      "region": "Asia",
+      "whyFunded": [
+        "Huge underserved healthcare market in India",
+        "Hybrid model (digital + physical) is defensible",
+        "Strong unit economics with tech-enabled efficiency"
+      ],
+      "usps": [
+        "24/7 virtual care app",
+        "Integrated physical hospital network",
+        "AI-powered triage and diagnostics"
+      ],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD TO COPY - CAPITAL INTENSIVE",
+        "reasoning": "Requires significant capital for hospitals + regulatory navigation in healthcare. The tech layer alone is copyable, but the full-stack model needs deep pockets.",
+        "alternativeApproach": "Build the software layer only - telemedicine platform for emerging markets. Let others handle the physical infrastructure."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/06/top-startup-and-tech-funding-news-january-6-2025/",
+      "companyUrl": "https://even.in",
+      "datePublished": "2026-01-06",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-003",
+      "source": "techstartups",
+      "companyName": "VelaFi",
+      "description": "Enterprise stablecoin payments infrastructure enabling businesses to send, receive, and manage stablecoin transactions at scale.",
+      "fundingRound": "Series B",
+      "amountRaised": 20000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "VC" }
+      ],
+      "companyType": "Fintech",
+      "industry": "Payments / Crypto",
+      "location": "USA",
+      "region": "North America",
+      "whyFunded": [
+        "Stablecoins becoming mainstream payment rail",
+        "Enterprise focus = higher margins than consumer",
+        "Regulatory clarity improving for crypto payments"
+      ],
+      "usps": [
+        "Enterprise-grade stablecoin treasury",
+        "Multi-chain payment rails",
+        "Compliance-first architecture"
+      ],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - REGULATORY MOAT",
+        "reasoning": "The tech is buildable, but regulatory licenses (money transmission) create a real barrier. First-movers who get licensed have an advantage.",
+        "alternativeApproach": "Build stablecoin tools for specific verticals (freelancers, cross-border payroll) that don't require full money transmission licenses."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/12/top-startup-and-tech-funding-news-january-12-2025/",
+      "companyUrl": "https://velafi.com",
+      "datePublished": "2026-01-12",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-004",
+      "source": "techstartups",
+      "companyName": "Parloa",
+      "description": "AI-powered contact center automation platform. Enterprise conversational AI for customer service at scale.",
+      "fundingRound": "Series D",
+      "amountRaised": 350000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "VC" }
+      ],
+      "companyType": "AI / Enterprise",
+      "industry": "Customer Service",
+      "location": "Berlin, Germany",
+      "region": "Europe",
+      "whyFunded": [
+        "Contact centers are $400B+ market ripe for AI disruption",
+        "Proven enterprise traction (valuation tripled to $3B)",
+        "AI agents replacing human agents at scale"
+      ],
+      "usps": [
+        "Enterprise-grade AI voice agents",
+        "Multi-language support",
+        "Deep integrations with contact center platforms"
+      ],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - BUT VERTICAL NICHES AVAILABLE",
+        "reasoning": "$350M raised means they're well-capitalized to dominate enterprise. However, they can't serve every vertical equally well.",
+        "alternativeApproach": "Build AI voice agents for specific verticals they won't prioritize: restaurants, dental offices, real estate. Niche down hard."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
+      "companyUrl": "https://parloa.com",
+      "datePublished": "2026-01-14",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-005",
+      "source": "techstartups",
+      "companyName": "Tebra",
+      "description": "Healthcare practice management platform embedding AI across medical practices for scheduling, billing, and patient engagement.",
+      "fundingRound": "Growth",
+      "amountRaised": 250000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "PE" }
+      ],
+      "companyType": "HealthTech",
+      "industry": "Healthcare SaaS",
+      "location": "USA",
+      "region": "North America",
+      "whyFunded": [
+        "Healthcare practices desperate for efficiency gains",
+        "AI automation reducing admin burden by 40%+",
+        "Sticky SaaS with high switching costs"
+      ],
+      "usps": [
+        "All-in-one practice management",
+        "AI-powered scheduling optimization",
+        "Automated patient communications"
+      ],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - ESTABLISHED PLAYER",
+        "reasoning": "$250M raised indicates they're a market leader. Competing head-on is tough. Healthcare sales cycles are 12-18 months.",
+        "alternativeApproach": "Build AI add-ons that integrate WITH Tebra and similar platforms. Become a feature, not a competitor."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
+      "companyUrl": "https://tebra.com",
+      "datePublished": "2026-01-14",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-006",
+      "source": "techstartups",
+      "companyName": "Cast AI",
+      "description": "Cloud cost optimization platform with new OMNI Compute feature unifying GPU capacity across multiple cloud providers.",
+      "fundingRound": "Growth",
+      "amountRaised": 50000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "VC" }
+      ],
+      "companyType": "DevOps / Cloud",
+      "industry": "Cloud Infrastructure",
+      "location": "USA",
+      "region": "North America",
+      "whyFunded": [
+        "GPU costs are #1 pain point for AI companies",
+        "Multi-cloud is becoming standard",
+        "Proven ROI - customers save 50%+ on cloud bills"
+      ],
+      "usps": [
+        "Automated cloud cost optimization",
+        "Multi-cloud GPU orchestration",
+        "Kubernetes-native architecture"
+      ],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - CROWDED BUT GROWING",
+        "reasoning": "Cloud cost optimization is a competitive space (Spot, Zesty, etc.), but market is huge and growing. There's room for focused players.",
+        "alternativeApproach": "Build cost optimization for a specific stack: Vercel users, Supabase users, specific frameworks. Niche positioning wins."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
+      "companyUrl": "https://cast.ai",
+      "datePublished": "2026-01-14",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-007",
+      "source": "techstartups",
+      "companyName": "Alpaca",
+      "description": "Brokerage API infrastructure enabling fintechs to embed stock and crypto trading into their apps.",
+      "fundingRound": "Series C",
+      "amountRaised": 150000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "VC" }
+      ],
+      "companyType": "Fintech",
+      "industry": "Trading Infrastructure",
+      "location": "USA",
+      "region": "North America",
+      "whyFunded": [
+        "Embedded finance is exploding",
+        "Every fintech wants to offer trading",
+        "API-first approach = easy integration"
+      ],
+      "usps": [
+        "Commission-free trading API",
+        "Multi-asset support (stocks, crypto)",
+        "White-label brokerage infrastructure"
+      ],
+      "analysis": {
+        "copyabilityScore": 1,
+        "verdict": "VERY HARD - REGULATORY FORTRESS",
+        "reasoning": "Brokerage licenses take years and millions to obtain. Alpaca already has them. This is a regulated infrastructure play - not for copying.",
+        "alternativeApproach": "Build ON TOP of Alpaca's API. Create vertical trading apps (for doctors, for teachers, for specific communities) using their infrastructure."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
+      "companyUrl": "https://alpaca.markets",
+      "datePublished": "2026-01-14",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-008",
+      "source": "techstartups",
+      "companyName": "Tucuvi",
+      "description": "AI-powered clinical voice assistant for healthcare. Automates patient follow-up calls and clinical data collection.",
+      "fundingRound": "Series A",
+      "amountRaised": 20000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Frontline Ventures", "type": "VC", "lead": true },
+        { "name": "Seaya Ventures", "type": "VC" },
+        { "name": "KFund", "type": "VC" }
+      ],
+      "companyType": "HealthTech / AI",
+      "industry": "Healthcare",
+      "location": "Spain",
+      "region": "Europe",
+      "whyFunded": [
+        "Clinical staff shortages are critical",
+        "AI voice can handle 80% of routine follow-ups",
+        "European healthcare market is underserved by tech"
+      ],
+      "usps": [
+        "Medical-grade conversational AI",
+        "Multi-language clinical support",
+        "EHR integration"
+      ],
+      "analysis": {
+        "copyabilityScore": 3,
+        "verdict": "MEDIUM - REGIONAL OPPORTUNITY",
+        "reasoning": "Healthcare AI voice is hot. Tucuvi is focused on Europe/Spain. Other regions are open. The tech is buildable with modern AI tools.",
+        "alternativeApproach": "Build similar solution for US market, or focus on specific conditions (diabetes management, post-surgery follow-up, mental health check-ins)."
+      },
+      "articleUrl": "https://www.seedtable.com/funding-rounds/recent",
+      "companyUrl": "https://tucuvi.com",
+      "datePublished": "2026-01-15",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-009",
+      "source": "techstartups",
+      "companyName": "Mindsite",
+      "description": "AI-powered mental health platform providing personalized therapy recommendations and progress tracking.",
+      "fundingRound": "Seed",
+      "amountRaised": 2800000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "VC" }
+      ],
+      "companyType": "HealthTech",
+      "industry": "Mental Health",
+      "location": "Europe",
+      "region": "Europe",
+      "whyFunded": [
+        "Mental health crisis post-pandemic",
+        "Therapist shortage creates opportunity for AI augmentation",
+        "B2B2C model through employers"
+      ],
+      "usps": [
+        "AI-matched therapy recommendations",
+        "Progress tracking and analytics",
+        "Employer wellness integration"
+      ],
+      "analysis": {
+        "copyabilityScore": 4,
+        "verdict": "COPYABLE - HOT SPACE",
+        "reasoning": "Mental health tech is crowded but massive. $2.8M seed means they're early. Many angles still open.",
+        "alternativeApproach": "Focus on underserved segments: teens, seniors, specific professions (healthcare workers, teachers). Or go B2B2C through specific employer verticals."
+      },
+      "articleUrl": "https://www.seedtable.com/funding-rounds/recent",
+      "companyUrl": "https://mindsite.com",
+      "datePublished": "2026-01-10",
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "funded-010",
+      "source": "techstartups",
+      "companyName": "LMArena",
+      "description": "Crowdsourced AI benchmarking platform. Community-driven evaluation of LLMs through blind comparisons.",
+      "fundingRound": "Series A",
+      "amountRaised": 150000000,
+      "currency": "USD",
+      "investors": [
+        { "name": "Not disclosed", "type": "VC" }
+      ],
+      "companyType": "AI Infrastructure",
+      "industry": "AI / DevTools",
+      "location": "USA",
+      "region": "North America",
+      "whyFunded": [
+        "AI model evaluation is critical as models proliferate",
+        "Community/crowdsourced approach creates network effects",
+        "Trusted neutral benchmark in fragmented market"
+      ],
+      "usps": [
+        "Crowdsourced blind LLM comparisons",
+        "Real human preferences, not synthetic benchmarks",
+        "Industry-standard leaderboard"
+      ],
+      "analysis": {
+        "copyabilityScore": 2,
+        "verdict": "HARD - NETWORK EFFECTS",
+        "reasoning": "$150M means they're well-funded to maintain leadership. The community/network effect is hard to replicate.",
+        "alternativeApproach": "Build domain-specific LLM benchmarks: legal AI accuracy, medical AI safety, code generation quality. Niche benchmarks have value."
+      },
+      "articleUrl": "https://techstartups.com/2026/01/14/top-startup-and-tech-funding-news-january-14-2025/",
+      "companyUrl": "https://lmarena.ai",
+      "datePublished": "2026-01-14",
+      "dateAdded": "2026-01-20"
+    }
+  ],
+  "stages": ["Pre-seed", "Seed", "Series A", "Series B", "Series C", "Series D", "Growth"],
+  "industries": ["AI / Enterprise", "Fintech", "HealthTech", "Cybersecurity", "Cloud Infrastructure", "AI Infrastructure", "DevTools"]
+}

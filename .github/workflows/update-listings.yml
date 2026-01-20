@@ -28,10 +28,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Fetch funded startups from RSS feeds
+        run: node scripts/fetch-funded-startups.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/listings.json; then
+          if git diff --quiet data/; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -42,8 +47,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/listings.json data/digest.json
-          git commit -m "Auto-update: New listings from RSS feeds [$(date +'%Y-%m-%d')]"
+          git add data/
+          git commit -m "Auto-update: New listings and funded startups [$(date +'%Y-%m-%d')]"
           git push
 
       - name: Create issue with digest
