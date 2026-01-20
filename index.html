@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Sniper - Online Business Acquisition Opportunities</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>BR Sniper</h1>
+                    <span class="tagline">Online Business Acquisition Opportunities</span>
+                </div>
+                <nav class="nav">
+                    <a href="#listings" class="nav-link active">Listings</a>
+                    <a href="#insights" class="nav-link">Market Insights</a>
+                    <a href="#sources" class="nav-link">Sources</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Find Your Next Online Business</h2>
+                <p>Curated opportunities from top acquisition platforms - pure online plays with proven revenue</p>
+                <div class="stats-bar">
+                    <div class="stat">
+                        <span class="stat-number" id="total-listings">0</span>
+                        <span class="stat-label">Listings</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="total-sources">0</span>
+                        <span class="stat-label">Sources</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="last-updated">-</span>
+                        <span class="stat-label">Last Updated</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="listings" class="listings-section">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category-filter">Category</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="source-filter">Source</label>
+                        <select id="source-filter">
+                            <option value="all">All Sources</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="revenue-filter">Min Revenue</label>
+                        <select id="revenue-filter">
+                            <option value="0">Any</option>
+                            <option value="100000">€100K+</option>
+                            <option value="250000">€250K+</option>
+                            <option value="500000">€500K+</option>
+                            <option value="1000000">€1M+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-filter">Sort By</label>
+                        <select id="sort-filter">
+                            <option value="rating">Rating</option>
+                            <option value="revenue">Revenue</option>
+                            <option value="date">Date Added</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="listings-grid" id="listings-grid">
+                    <!-- Listings will be inserted here by JavaScript -->
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    <p>No listings match your filters. Try adjusting your criteria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="insights" class="insights-section">
+            <div class="container">
+                <h2>Market Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>EBITDA Multiples by Sector</h3>
+                        <div class="multiples-list" id="multiples-list">
+                            <!-- Will be populated by JS -->
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Market Trends</h3>
+                        <ul class="trends-list" id="trends-list">
+                            <!-- Will be populated by JS -->
+                        </ul>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Category Overview</h3>
+                        <div class="categories-overview" id="categories-overview">
+                            <!-- Will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sources" class="sources-section">
+            <div class="container">
+                <h2>Data Sources</h2>
+                <p class="sources-intro">We aggregate listings from the best business acquisition platforms. More sources coming soon.</p>
+                <div class="sources-grid" id="sources-grid">
+                    <!-- Will be populated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BR Sniper. All information sourced from public listings.</p>
+            <p class="disclaimer">Disclaimer: Always perform your own due diligence before any acquisition.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

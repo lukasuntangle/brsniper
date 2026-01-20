@@ -1,0 +1,303 @@
+{
+  "lastUpdated": "2026-01-20",
+  "sources": [
+    {
+      "id": "brookz",
+      "name": "Brookz.nl",
+      "url": "https://www.brookz.nl",
+      "country": "Netherlands",
+      "description": "Largest business acquisition platform in the Netherlands"
+    }
+  ],
+  "listings": [
+    {
+      "id": "brookz-40672",
+      "source": "brookz",
+      "title": "SaaS Platform & IoT Systems Integrator",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/saas-platform-iot-systems-integrator/40672",
+      "category": "SaaS",
+      "description": "Leading IoT innovator for 20+ years. Offers WMS, Asset Management, and Field Services via proprietary SaaS platform using RFID, GPS, barcode, UWB, LoRa, WIFI, and Bluetooth technologies.",
+      "financials": {
+        "revenue": 1300000,
+        "ebitda": 720000,
+        "grossMargin": 80,
+        "recurringRevenue": 95
+      },
+      "employees": 4,
+      "location": "Randstad, Netherlands",
+      "highlights": [
+        "95% recurring revenue",
+        "85% of customers are 5+ year relationships",
+        "30% of customers are 10+ year partners",
+        "80% gross margin",
+        "Highly automated operations"
+      ],
+      "businessModel": "B2B SaaS",
+      "onlineOnly": true,
+      "rating": 5,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-41400",
+      "source": "brookz",
+      "title": "SaaS Data Integration & Workflow Management Platform",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/saas-data-integratie-en-workflow-managementplatform/41400",
+      "category": "SaaS",
+      "description": "Innovative no-code SaaS platform for data integration and workflow management. Serves construction and installation sector. Has built first-of-its-kind AI application for Dutch government currently being rolled out nationally.",
+      "financials": {
+        "revenue": 400000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "No-code platform",
+        "AI application for government",
+        "First in NL to complete DPIA and IAMA processes",
+        "National rollout in progress"
+      ],
+      "businessModel": "B2B SaaS",
+      "onlineOnly": true,
+      "rating": 4,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-34400",
+      "source": "brookz",
+      "title": "E-commerce Platform (SaaS) for Short Chain Market",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/e-commerce-platform-saas-voor-de-korte-keten-markt/34400",
+      "category": "SaaS",
+      "description": "End-to-end SaaS platform for short chain initiatives connecting local producers to consumers. Covers communication, ordering, payments, and logistics. Proven in Amsterdam (local entrepreneurs) and Brabant (farmers).",
+      "financials": {},
+      "location": "Netherlands",
+      "highlights": [
+        "Built with latest tools and infrastructure",
+        "End-to-end platform",
+        "Proven concept in multiple regions",
+        "Full code, documentation, and IP included"
+      ],
+      "businessModel": "B2B SaaS Platform",
+      "onlineOnly": true,
+      "rating": 3,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-34116",
+      "source": "brookz",
+      "title": "Social Media Automation Tool (SaaS)",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/social-media-automation-tool-saas/34116",
+      "category": "SaaS",
+      "description": "SaaS tool for automating social media management and scheduling.",
+      "financials": {},
+      "location": "Netherlands",
+      "highlights": [
+        "Automated social media management",
+        "SaaS model with recurring revenue potential"
+      ],
+      "businessModel": "B2B/B2C SaaS",
+      "onlineOnly": true,
+      "rating": 3,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-34145",
+      "source": "brookz",
+      "title": "SaaS Application for Business Service Providers",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/direct-inzetbare-saas-applicatie-voor-zakelijke-dienstverleners-1/34145",
+      "category": "SaaS",
+      "description": "Ready-to-deploy SaaS application for business service providers. Applications include corporate emergency organization setup and cyber awareness for SMEs. Broad applicability with joint venture opportunities.",
+      "financials": {},
+      "location": "Netherlands",
+      "highlights": [
+        "Ready to deploy immediately",
+        "Cyber awareness for SME market",
+        "Joint venture opportunities",
+        "Multiple use cases"
+      ],
+      "businessModel": "B2B SaaS",
+      "onlineOnly": true,
+      "rating": 3,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-39244",
+      "source": "brookz",
+      "title": "E-commerce Business with 3 Brands",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/e-commerce-bedrijf-met-3-merken/39244",
+      "category": "E-commerce",
+      "description": "Three fully branded e-commerce brands registered with BOIP, active on Bol.com and Shopify. Stable sales record with strong growth potential. Fully automated operations with no fixed employees.",
+      "financials": {},
+      "employees": 0,
+      "location": "Netherlands",
+      "highlights": [
+        "3 registered brands (BOIP)",
+        "Active on Bol.com and Shopify",
+        "No fixed employees",
+        "Largely automated",
+        "No physical premises - low overhead",
+        "Maximum flexibility"
+      ],
+      "businessModel": "E-commerce / Marketplace",
+      "onlineOnly": true,
+      "rating": 4,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-35451",
+      "source": "brookz",
+      "title": "Webshop in Medical Articles",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-medische-artikelen/35451",
+      "category": "E-commerce",
+      "description": "Established webshop specializing in medical articles and supplies.",
+      "financials": {
+        "revenue": 900000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "Strong revenue of 900K",
+        "Medical/healthcare niche",
+        "Established customer base"
+      ],
+      "businessModel": "E-commerce",
+      "onlineOnly": true,
+      "rating": 4,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-32418",
+      "source": "brookz",
+      "title": "E-commerce Business in Optical Articles",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/e-commerceonderneming-in-optische-artikelen/32418",
+      "category": "E-commerce",
+      "description": "Specialized e-commerce business in contact lenses and related optical products.",
+      "financials": {
+        "revenue": 200000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "Specialized niche market",
+        "Recurring customer needs (contact lenses)",
+        "200K annual revenue"
+      ],
+      "businessModel": "E-commerce",
+      "onlineOnly": true,
+      "rating": 3,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-38004",
+      "source": "brookz",
+      "title": "Wine Webshop - Dropship & E-commerce",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-wijn-dropship-en-ecom/38004",
+      "category": "E-commerce",
+      "description": "Wine webshop built on Shopify with customized theme. Operates on dropship model - no inventory needed.",
+      "financials": {},
+      "location": "Netherlands",
+      "highlights": [
+        "Dropship model - no inventory",
+        "Built on Shopify",
+        "Customized theme",
+        "Wine/alcohol niche"
+      ],
+      "businessModel": "Dropshipping",
+      "onlineOnly": true,
+      "rating": 3,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-30989",
+      "source": "brookz",
+      "title": "Digital Marketing Agency",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/digital-marketing-agency-1/30989",
+      "category": "Digital Services",
+      "description": "All-round digital marketing agency founded in 2016. Team of 10-20 experts providing full-service digital marketing solutions.",
+      "financials": {
+        "revenue": 1682000,
+        "ebitda": 650000
+      },
+      "employees": 15,
+      "location": "Netherlands",
+      "highlights": [
+        "Founded 2016, established track record",
+        "Strong growth: 900K to 1.68M revenue",
+        "EBITDA of 650K",
+        "10-20 driven experts",
+        "All-round digital services"
+      ],
+      "businessModel": "Agency / Services",
+      "onlineOnly": true,
+      "rating": 4,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-41254",
+      "source": "brookz",
+      "title": "SaaS Platforms for Boat Management & Rental",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/saas-platformen-beheren-verhuren-van-boten/41254",
+      "category": "SaaS",
+      "description": "Digital platforms for boat management and rental being sold from bankruptcy. Cloud-based platforms offering opportunity for parties active in rental, leisure, platform technology, or digital services.",
+      "financials": {},
+      "location": "Netherlands",
+      "highlights": [
+        "Sale from bankruptcy - potential bargain",
+        "Cloud-based infrastructure",
+        "Boat/leisure niche",
+        "IP and platform included"
+      ],
+      "businessModel": "B2C SaaS Platform",
+      "onlineOnly": true,
+      "rating": 2,
+      "dateAdded": "2026-01-20"
+    }
+  ],
+  "categories": [
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "count": 25,
+      "description": "Software as a Service businesses with recurring revenue models"
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-commerce",
+      "count": 149,
+      "description": "Online shops and e-commerce businesses"
+    },
+    {
+      "id": "webshop",
+      "name": "Webshop",
+      "count": 99,
+      "description": "Web stores and online retail"
+    },
+    {
+      "id": "startup",
+      "name": "Startup",
+      "count": 114,
+      "description": "Early-stage companies with growth potential"
+    },
+    {
+      "id": "marketing",
+      "name": "Online Marketing",
+      "count": 6,
+      "description": "Digital marketing agencies and services"
+    },
+    {
+      "id": "dropship",
+      "name": "Dropshipping",
+      "count": 1,
+      "description": "No-inventory e-commerce businesses"
+    }
+  ],
+  "marketInsights": {
+    "ebitdaMultiples": {
+      "ecommerce": { "low": 4.6, "high": 5.7 },
+      "software": { "low": 5.9, "high": 7.2 },
+      "marketing": { "low": 3.3, "high": 4.0 },
+      "average": 4.9
+    },
+    "trends": [
+      "Dutch consumers expect to make 40% of purchases online by 2025",
+      "Number of webshop acquisitions continues to increase",
+      "Market is becoming buyer-friendly again",
+      "Typical acquisition prices: 2-4x gross profit"
+    ]
+  }
+}
