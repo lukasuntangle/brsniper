@@ -123,17 +123,72 @@ body {
     opacity: 0.7;
 }
 
+/* Source Tabs */
+.source-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 16px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.source-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.source-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.source-tab:hover {
+    border-color: var(--primary);
+    background: #f0f7ff;
+}
+
+.source-tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.source-tab .tab-flag {
+    font-size: 1.1rem;
+}
+
+.source-tab .tab-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.source-tab .tab-count {
+    background: rgba(0,0,0,0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.source-tab.active .tab-count {
+    background: rgba(255,255,255,0.2);
+}
+
 /* Filters */
 .filters {
     display: flex;
     gap: 16px;
-    padding: 24px 0;
+    padding: 16px 0;
     flex-wrap: wrap;
-    background: var(--surface);
-    margin: 0 -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-bottom: 1px solid var(--border);
 }
 
 .filter-group {

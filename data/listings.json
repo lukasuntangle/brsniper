@@ -6,10 +6,395 @@
       "name": "Brookz.nl",
       "url": "https://www.brookz.nl",
       "country": "Netherlands",
+      "flag": "🇳🇱",
       "description": "Largest business acquisition platform in the Netherlands"
+    },
+    {
+      "id": "acquire",
+      "name": "Acquire.com",
+      "url": "https://acquire.com",
+      "country": "Global (US)",
+      "flag": "🌍",
+      "description": "World's largest startup acquisition marketplace. Best for SaaS. $500M+ facilitated."
+    },
+    {
+      "id": "empire",
+      "name": "Empire Flippers",
+      "url": "https://empireflippers.com",
+      "country": "Global (US)",
+      "flag": "🌍",
+      "description": "Curated marketplace with rigorous vetting. $530M+ facilitated. E-commerce & content focus."
+    },
+    {
+      "id": "microns",
+      "name": "Microns.io",
+      "url": "https://www.microns.io",
+      "country": "Global",
+      "flag": "🌍",
+      "description": "Micro-SaaS marketplace. Deals from $200 to $500K. Zero commission. Manual vetting."
+    },
+    {
+      "id": "flippa",
+      "name": "Flippa",
+      "url": "https://flippa.com",
+      "country": "Global (AU)",
+      "flag": "🌍",
+      "description": "Largest general marketplace. All price points. Auction-style. Less vetting = more noise."
     }
   ],
   "listings": [
+    {
+      "id": "acquire-001",
+      "source": "acquire",
+      "title": "B2B Review Management SaaS (MyFrank-style)",
+      "url": "https://acquire.com/saas-companies-for-sale/",
+      "category": "SaaS",
+      "description": "B2B SaaS platform helping businesses collect and manage Google reviews. QR code attribution to employees, challenges, rewards, and multi-location tracking. Designed for hospitality, retail, franchises.",
+      "financials": {
+        "revenue": 480000,
+        "mrr": 40000,
+        "recurringRevenue": 95
+      },
+      "location": "Global",
+      "highlights": [
+        "$40K MRR",
+        "95% recurring",
+        "B2B = sticky customers",
+        "Multi-location enterprise play"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING - B2B SAAS",
+        "uspCopyable": "Medium - review management is crowded but execution matters",
+        "reasoning": "Review management for SMBs is proven. QR attribution and gamification is a nice angle. B2B SaaS at $40K MRR is the sweet spot for acquisition - big enough to matter, small enough to afford. Would need to verify churn and CAC.",
+        "risks": ["Depends on Google Reviews API", "Competition (Birdeye, Podium)", "SMB churn"],
+        "opportunity": "Expand to other review platforms (Yelp, Trustpilot). Upsell analytics. Roll up similar tools."
+      },
+      "businessModel": "B2B SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "acquire-002",
+      "source": "acquire",
+      "title": "Web Scraping SaaS on Apify",
+      "url": "https://acquire.com/saas-companies-for-sale/",
+      "category": "SaaS",
+      "description": "High-margin SaaS built on Apify providing scalable web scraping tools. Fully automated with ~5h/month management required. 10% month-over-month growth.",
+      "financials": {
+        "revenue": 144000,
+        "mrr": 12000
+      },
+      "location": "Global",
+      "highlights": [
+        "€12K/month revenue",
+        "10% MoM growth",
+        "~5 hours/month to run",
+        "Built on Apify platform"
+      ],
+      "analysis": {
+        "verdict": "GEM - PASSIVE INCOME",
+        "uspCopyable": "High - Apify ecosystem makes this replicable",
+        "reasoning": "This is the dream: $12K/month with 5 hours of work. Growth is strong at 10% MoM. Built on Apify = platform risk but also leverage. Web scraping is evergreen need. The question is defensibility - can someone clone this easily?",
+        "risks": ["Platform dependency (Apify)", "Easy to replicate", "Enterprise customers may build in-house"],
+        "opportunity": "Scale on Apify marketplace. Add more scrapers. Bundle into data products."
+      },
+      "businessModel": "Micro-SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "acquire-003",
+      "source": "acquire",
+      "title": "ERP Manufacturing B2B SaaS",
+      "url": "https://acquire.com/saas-companies-for-sale/",
+      "category": "SaaS",
+      "description": "Profitable ERP solution for manufacturing sector. Over 60% net profit margins. Strong customer retention in a sticky vertical.",
+      "financials": {
+        "revenue": 1200000,
+        "mrr": 100000,
+        "netMargin": 60
+      },
+      "location": "USA",
+      "highlights": [
+        "$100K MRR",
+        "60%+ net margin",
+        "Manufacturing vertical",
+        "ERP = very sticky"
+      ],
+      "analysis": {
+        "verdict": "EXCELLENT - CASH COW",
+        "uspCopyable": "Very Low - ERP takes years to build and vertical expertise",
+        "reasoning": "ERP for manufacturing is as sticky as it gets. 60% net margins are exceptional. $100K MRR is substantial. This is a cash cow acquisition - buy it, maintain it, collect checks. Don't try to copy this.",
+        "risks": ["Tech debt", "Key customer concentration", "Migration difficulty works both ways"],
+        "opportunity": "Hold for cash flow. Potentially sell to PE roll-up in manufacturing software space."
+      },
+      "businessModel": "B2B SaaS (Vertical)",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "empire-001",
+      "source": "empire",
+      "title": "Art & Digital Media SaaS",
+      "url": "https://empireflippers.com/marketplace/saas-businesses-for-sale/",
+      "category": "SaaS",
+      "description": "SaaS business in the art and digital media niche. Created August 2012. Consistent profitability with strong margins.",
+      "financials": {
+        "revenue": 295000,
+        "profit": 24576,
+        "profitMargin": 100
+      },
+      "location": "Global",
+      "highlights": [
+        "$24.5K monthly profit",
+        "59x multiple asked",
+        "12+ years operating",
+        "Art/creative niche"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING - LONGEVITY",
+        "uspCopyable": "Low - 12 years of brand building",
+        "reasoning": "12 years of operation is rare. Proves the business model works. Creative tools niche is growing. The 59x multiple is high but reflects the stability. Need to verify if it's growing or declining.",
+        "risks": ["AI disruption in creative tools", "High multiple = expensive", "Unclear growth trajectory"],
+        "opportunity": "Stable cash flow. Could modernize with AI features. Established brand in niche market."
+      },
+      "businessModel": "B2B/B2C SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "empire-002",
+      "source": "empire",
+      "title": "Amazon FBA Home Products Business",
+      "url": "https://empireflippers.com/marketplace/amazon-fba-businesses-for-sale/",
+      "category": "E-commerce",
+      "description": "Amazon FBA business in home products niche. Operating since 2009. Strong brand presence and consistent profitability.",
+      "financials": {
+        "revenue": 740000,
+        "profit": 61893,
+        "profitMargin": 100
+      },
+      "location": "USA",
+      "highlights": [
+        "$62K monthly profit",
+        "40x multiple asked",
+        "15+ years operating",
+        "Amazon FBA model"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING - BUT AMAZON DEPENDENT",
+        "uspCopyable": "Medium - FBA model is replicable, brand is not",
+        "reasoning": "$62K monthly profit is substantial. 15 years on Amazon shows adaptability. But 100% Amazon dependency is risky - one policy change or suspension can kill you. The multiple reflects this risk.",
+        "risks": ["Amazon dependency", "Account suspension risk", "Fee increases", "Competition from Amazon Basics"],
+        "opportunity": "Diversify to D2C, Walmart, other channels. The brand equity could transfer off-platform."
+      },
+      "businessModel": "E-commerce (FBA)",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "empire-003",
+      "source": "empire",
+      "title": "Content Site - Relationships Niche",
+      "url": "https://empireflippers.com/marketplace/",
+      "category": "Content",
+      "description": "Content website in the relationships and communication niche. Started in 2023. Growing traffic and affiliate revenue.",
+      "financials": {
+        "revenue": 96000,
+        "profit": 8000
+      },
+      "location": "Global",
+      "highlights": [
+        "$8K monthly profit",
+        "Relationships niche",
+        "Affiliate + display ads",
+        "Started 2023 = post-AI"
+      ],
+      "analysis": {
+        "verdict": "RISKY - CONTENT POST-AI",
+        "uspCopyable": "High - content sites are commodity now",
+        "reasoning": "Content sites are risky post-ChatGPT. Google updates have decimated many. The fact it started in 2023 and survived is interesting - may have adapted to new reality. Relationships niche has emotional content that AI struggles with.",
+        "risks": ["Google algorithm changes", "AI content competition", "Affiliate program changes"],
+        "opportunity": "If traffic is from diverse sources (social, email, direct), less risky. Could pivot to community or courses."
+      },
+      "businessModel": "Content / Affiliate",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "flippa-001",
+      "source": "flippa",
+      "title": "Dreamer Designs - E-commerce Brand",
+      "url": "https://flippa.com/",
+      "category": "E-commerce",
+      "description": "Established e-commerce brand sold for $2M. Cross-border acquisition from Canada to US buyer. Completed in 69 days.",
+      "financials": {
+        "revenue": 2000000,
+        "askingPrice": 2000000
+      },
+      "location": "Canada → USA",
+      "highlights": [
+        "$2M exit",
+        "69 days to close",
+        "Cross-border deal",
+        "Established brand"
+      ],
+      "analysis": {
+        "verdict": "CASE STUDY - SUCCESS STORY",
+        "uspCopyable": "N/A - this is a closed deal",
+        "reasoning": "Included as a benchmark. $2M e-commerce exit in 69 days shows the market is active. Cross-border deals are happening. This is what a successful e-commerce exit looks like.",
+        "risks": ["N/A - sold"],
+        "opportunity": "Study this deal structure for your own future exit"
+      },
+      "businessModel": "E-commerce Brand",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "flippa-002",
+      "source": "flippa",
+      "title": "Learn Programming Academy - Content",
+      "url": "https://flippa.com/",
+      "category": "Content",
+      "description": "Programming education platform sold for $1.4M. Australia to US buyer. 186 days to close.",
+      "financials": {
+        "revenue": 1400000,
+        "askingPrice": 1400000
+      },
+      "location": "Australia → USA",
+      "highlights": [
+        "$1.4M exit",
+        "Programming education",
+        "Content + courses",
+        "186 days to close"
+      ],
+      "analysis": {
+        "verdict": "CASE STUDY - EDTECH EXIT",
+        "uspCopyable": "Medium - education content is buildable",
+        "reasoning": "EdTech exits are happening. Programming education has massive TAM. The longer close time (186 days vs 69) suggests more complexity or negotiation. Shows content businesses can still command good prices.",
+        "risks": ["N/A - sold"],
+        "opportunity": "Education + content + community is a winning formula. Programming is evergreen."
+      },
+      "businessModel": "EdTech / Content",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "flippa-003",
+      "source": "flippa",
+      "title": "Real Time Google Ads SaaS",
+      "url": "https://flippa.com/",
+      "category": "SaaS",
+      "description": "SaaS tool for real-time Google Ads management. UK-based, sold to UK buyer for $1.3M in 250 days.",
+      "financials": {
+        "revenue": 1300000,
+        "askingPrice": 1300000
+      },
+      "location": "UK → UK",
+      "highlights": [
+        "$1.3M exit",
+        "Google Ads tooling",
+        "UK domestic deal",
+        "250 days to close"
+      ],
+      "analysis": {
+        "verdict": "CASE STUDY - MARTECH EXIT",
+        "uspCopyable": "Low - Google Ads integrations are complex",
+        "reasoning": "Marketing technology sells. Google Ads tools have built-in demand. UK domestic deal avoided cross-border complexity. 250 days is longer - likely due diligence on integrations and API dependencies.",
+        "risks": ["N/A - sold"],
+        "opportunity": "MarTech with platform integrations commands premiums. API relationships are moats."
+      },
+      "businessModel": "B2B SaaS (MarTech)",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "microns-001",
+      "source": "microns",
+      "title": "AI Voiceover SaaS Platform",
+      "url": "https://www.microns.io/startup-listings/ai-voiceover-saas-platform",
+      "category": "SaaS",
+      "description": "AI-powered voiceover generation platform. Text-to-speech SaaS for content creators and marketers.",
+      "financials": {
+        "revenue": 36000,
+        "mrr": 3000
+      },
+      "location": "Global",
+      "highlights": [
+        "$3K MRR",
+        "AI voiceover niche",
+        "Content creator market",
+        "Micro-SaaS"
+      ],
+      "analysis": {
+        "verdict": "SMALL BUT TRENDY",
+        "uspCopyable": "High - AI voice tools are commoditizing",
+        "reasoning": "$3K MRR is small but validates the idea. AI voiceover is hot but also crowded (ElevenLabs, etc.). The question is differentiation - why would someone use this over the big players? Could be price, niche, or specific features.",
+        "risks": ["Competition from well-funded AI startups", "API costs for AI models", "Fast-moving market"],
+        "opportunity": "Could niche down (e.g., AI voices for podcasters, YouTubers, specific languages)"
+      },
+      "businessModel": "Micro-SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "microns-002",
+      "source": "microns",
+      "title": "AI Model Comparison Platform",
+      "url": "https://www.microns.io/startup-listings/platform-to-chat-compare-ai-models",
+      "category": "SaaS",
+      "description": "Platform to chat with and compare different AI models side-by-side. Useful for developers and businesses evaluating AI tools.",
+      "financials": {
+        "revenue": 24000,
+        "mrr": 2000
+      },
+      "location": "Global",
+      "highlights": [
+        "$2K MRR",
+        "AI comparison tool",
+        "Developer audience",
+        "Hot market"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING TIMING",
+        "uspCopyable": "High - but execution matters",
+        "reasoning": "AI model comparison is genuinely useful. Everyone's evaluating GPT vs Claude vs Gemini. $2K MRR is tiny but proves there's demand. Could grow fast with right positioning. Risk is someone bigger builds this as a feature.",
+        "risks": ["Feature, not product?", "API costs", "Big players could crush it"],
+        "opportunity": "First-mover in AI evaluation space. Could add benchmarking, cost calculators, enterprise features."
+      },
+      "businessModel": "Micro-SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "microns-003",
+      "source": "microns",
+      "title": "AI Voice-to-Notes App",
+      "url": "https://www.microns.io/startup-listings/ai-powered-voice-to-notes-app",
+      "category": "SaaS",
+      "description": "AI-powered app that converts voice recordings to structured notes. Useful for meetings, lectures, and personal note-taking.",
+      "financials": {
+        "revenue": 18000,
+        "mrr": 1500
+      },
+      "location": "Global",
+      "highlights": [
+        "$1.5K MRR",
+        "Voice-to-notes AI",
+        "Productivity tool",
+        "Mobile + web"
+      ],
+      "analysis": {
+        "verdict": "CROWDED BUT VALIDATED",
+        "uspCopyable": "High - many competitors (Otter, Fireflies, etc.)",
+        "reasoning": "Voice-to-notes is proven market. $1.5K MRR shows some traction. Competition is fierce (Otter.ai raised $50M+). Would need strong niche or feature differentiation to grow. Could be a good learning acquisition.",
+        "risks": ["Heavy competition", "Otter, Fireflies, Notion AI", "Hard to differentiate"],
+        "opportunity": "Niche down: voice notes for doctors, lawyers, specific professions with compliance needs"
+      },
+      "businessModel": "Micro-SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
     {
       "id": "brookz-36971",
       "source": "brookz",
@@ -35,34 +420,6 @@
         "opportunity": "Consolidation play - acquire and roll up similar niche B2B webshops"
       },
       "businessModel": "B2B E-commerce",
-      "onlineOnly": false,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-33482",
-      "source": "brookz",
-      "title": "Webshop in Sports Articles",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-sportartikelen/33482",
-      "category": "E-commerce",
-      "description": "Established sports equipment webshop since 2011. Located in central Netherlands with over €2.5M annual revenue.",
-      "financials": {
-        "revenue": 2500000
-      },
-      "employees": null,
-      "location": "Central Netherlands",
-      "highlights": [
-        "€2.5M revenue",
-        "13+ years in business (since 2011)",
-        "Established brand and customer base"
-      ],
-      "analysis": {
-        "verdict": "SKIP",
-        "uspCopyable": "Low - competing with Decathlon, Bol.com sports, Amazon",
-        "reasoning": "Sports is hyper-competitive. You're fighting Amazon, Decathlon, and every marketplace. Unless there's a specific sub-niche (climbing gear, archery, etc.), margins will be squeezed.",
-        "risks": ["Intense competition", "Brand dependency", "Seasonal demand"],
-        "opportunity": "Only interesting if it owns a unique brand or has exclusive supplier deals"
-      },
-      "businessModel": "E-commerce",
       "onlineOnly": false,
       "dateAdded": "2026-01-20"
     },
@@ -156,6 +513,36 @@
       "dateAdded": "2026-01-20"
     },
     {
+      "id": "brookz-37160",
+      "source": "brookz",
+      "title": "Niche Marketplace + Forum",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/niche-marktplaats-en-forum-1/37160",
+      "category": "Platform",
+      "description": "Combined Dutch marketplace and forum since 2006. 140K unique monthly visitors. Fully automated with low operational costs. Asking price €550K.",
+      "financials": {
+        "revenue": 90000,
+        "askingPrice": 550000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€90K revenue",
+        "140K monthly uniques",
+        "Since 2006 (18 years!)",
+        "Fully automated",
+        "Community + marketplace combo"
+      ],
+      "analysis": {
+        "verdict": "GEM - COMMUNITY MOAT",
+        "uspCopyable": "High concept, Low execution - community takes years to build",
+        "reasoning": "18 years of SEO authority and community trust. 140K monthly visitors is real traffic. Fully automated = true passive income. €550K asking on €90K revenue is ~6x which is fair for a passive asset. The community moat is real - you can't easily replicate 18 years of trust.",
+        "risks": ["Platform decline (forums are old-school)", "Single-niche dependency", "Traffic source risk"],
+        "opportunity": "Buy for cash flow + optionality. Could modernize (Discord, app) to re-engage community. The model is copyable - pick another niche and build over 3-5 years."
+      },
+      "businessModel": "Marketplace / Community",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
       "id": "brookz-41400",
       "source": "brookz",
       "title": "SaaS Data Integration & Workflow Platform",
@@ -180,121 +567,6 @@
         "opportunity": "If the tech is real, this could be acquired by a larger player. Government reference is valuable."
       },
       "businessModel": "B2B SaaS",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-39593",
-      "source": "brookz",
-      "title": "International ERP Software Company",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/internationaal-erp-softwarebedrijf/39593",
-      "category": "SaaS",
-      "description": "ERP software with modular architecture supporting 5 languages. Active in 5 countries. 40% of annual revenue comes in January (annual contracts), covering all yearly costs.",
-      "financials": {
-        "revenue": 300000,
-        "recurringRevenue": 40
-      },
-      "location": "International (5 countries)",
-      "highlights": [
-        "€300K revenue",
-        "40% recurring in January (annual prepay)",
-        "5 languages, 5 countries",
-        "Modular ERP system"
-      ],
-      "analysis": {
-        "verdict": "NICHE OPPORTUNITY",
-        "uspCopyable": "Low - ERP is complex and requires years of development",
-        "reasoning": "ERP is sticky but small at €300K. The 40% January prepay is nice cash flow. International presence is interesting but also complex. This is a lifestyle business for someone who wants to maintain an ERP product.",
-        "risks": ["Tech debt", "Support burden", "Competition from cloud ERP (Odoo, etc.)"],
-        "opportunity": "Could be a base for vertical-specific ERP plays if you can niche down further"
-      },
-      "businessModel": "B2B SaaS",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-34602",
-      "source": "brookz",
-      "title": "Online Marketing Agency (E-commerce Focus)",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/online-marketing-agency/34602",
-      "category": "Agency",
-      "description": "Founded 2018, specializing in e-commerce. Services include social media advertising, design, email marketing, and webshop development. Currently in exclusive negotiations.",
-      "financials": {
-        "revenue": 657000
-      },
-      "location": "Netherlands",
-      "highlights": [
-        "€657K revenue",
-        "E-commerce specialization",
-        "Founded 2018 - 8 years track record",
-        "Full service (ads, email, dev)"
-      ],
-      "analysis": {
-        "verdict": "SKIP - PEOPLE BUSINESS",
-        "uspCopyable": "N/A - you don't want to copy this",
-        "reasoning": "You said it yourself - you don't want to build a 10-year agency. This is a people business. Revenue walks out the door every night. Pass.",
-        "risks": ["Employee dependency", "Client concentration", "Constant sales needed"],
-        "opportunity": "None for you - this is for someone who wants to run an agency"
-      },
-      "businessModel": "Agency",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-34987",
-      "source": "brookz",
-      "title": "Online Marketing Bureau",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/online-marketing-bureau/34987",
-      "category": "Agency",
-      "description": "Healthy, profitable marketing bureau with 5 FTE + 2 owners + freelancers. Looking for entrepreneur to become part-owner and take over daily operations within ~3 years.",
-      "financials": {
-        "revenue": 500000
-      },
-      "employees": 7,
-      "location": "Netherlands",
-      "highlights": [
-        "€500K revenue",
-        "5 FTE + 2 owners",
-        "Profitable",
-        "3-year transition plan"
-      ],
-      "analysis": {
-        "verdict": "SKIP - SAME REASON",
-        "uspCopyable": "N/A",
-        "reasoning": "Same as above. People business, 7+ employees, you'd be buying a job. The 3-year transition plan means the current owners know it's not passive.",
-        "risks": ["All agency risks"],
-        "opportunity": "Only if you actually want to run an agency"
-      },
-      "businessModel": "Agency",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-40272",
-      "source": "brookz",
-      "title": "Web Agency (€150K+ Recurring)",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webbureau-150k-recurring-omzet-per-jaar/40272",
-      "category": "Agency",
-      "description": "Web agency building websites, webshops, and custom software. Offers smart tools, dashboards, and integrations. €150K+ in recurring annual revenue from maintenance/hosting contracts.",
-      "financials": {
-        "revenue": 150000,
-        "recurringRevenue": 100
-      },
-      "location": "Netherlands",
-      "highlights": [
-        "€150K+ recurring revenue",
-        "100% of stated revenue is recurring",
-        "Hosting/maintenance contracts",
-        "Custom software capabilities"
-      ],
-      "analysis": {
-        "verdict": "INTERESTING - SMALL BUT RECURRING",
-        "uspCopyable": "Medium - recurring model is replicable",
-        "reasoning": "The recurring angle changes things. If it's truly €150K recurring from hosting/maintenance with minimal work, this is more like a micro-SaaS than an agency. Need to verify actual work required to maintain.",
-        "risks": ["Client churn", "Tech support burden", "May need ongoing development"],
-        "opportunity": "If the recurring is truly passive (just hosting), this is a cash-flow asset. Stack multiple similar acquisitions."
-      },
-      "businessModel": "Productized Service / SaaS-like",
       "onlineOnly": true,
       "dateAdded": "2026-01-20"
     },
@@ -328,120 +600,6 @@
       "dateAdded": "2026-01-20"
     },
     {
-      "id": "brookz-37160",
-      "source": "brookz",
-      "title": "Niche Marketplace + Forum",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/niche-marktplaats-en-forum-1/37160",
-      "category": "Platform",
-      "description": "Combined Dutch marketplace and forum since 2006. 140K unique monthly visitors. Fully automated with low operational costs. Asking price €550K.",
-      "financials": {
-        "revenue": 90000,
-        "askingPrice": 550000
-      },
-      "location": "Netherlands",
-      "highlights": [
-        "€90K revenue",
-        "140K monthly uniques",
-        "Since 2006 (18 years!)",
-        "Fully automated",
-        "Community + marketplace combo"
-      ],
-      "analysis": {
-        "verdict": "GEM - COMMUNITY MOAT",
-        "uspCopyable": "High concept, Low execution - community takes years to build",
-        "reasoning": "18 years of SEO authority and community trust. 140K monthly visitors is real traffic. Fully automated = true passive income. €550K asking on €90K revenue is ~6x which is fair for a passive asset. The community moat is real - you can't easily replicate 18 years of trust.",
-        "risks": ["Platform decline (forums are old-school)", "Single-niche dependency", "Traffic source risk"],
-        "opportunity": "Buy for cash flow + optionality. Could modernize (Discord, app) to re-engage community. The model is copyable - pick another niche and build over 3-5 years."
-      },
-      "businessModel": "Marketplace / Community",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-36404",
-      "source": "brookz",
-      "title": "Sustainable Products Webshop",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webwinkel-met-duurzame-artikelen/36404",
-      "category": "E-commerce",
-      "description": "Successful eco-friendly products webshop. 4.5 years old with 10K Instagram followers, 7K email list, 25% repeat purchase rate, and 4.9 Trustpilot score (500+ reviews).",
-      "financials": {
-        "revenue": 130000
-      },
-      "location": "Netherlands",
-      "highlights": [
-        "€130K revenue",
-        "10K Instagram followers",
-        "7K email list",
-        "25% repeat purchase rate",
-        "4.9 Trustpilot (500+ reviews)"
-      ],
-      "analysis": {
-        "verdict": "SMALL BUT SOLID FOUNDATION",
-        "uspCopyable": "High - sustainability niche is accessible",
-        "reasoning": "Small revenue but strong fundamentals: 25% repeat rate, great reviews, engaged audience. Sustainability is a growing market. This is a 'starter acquisition' - buy it, learn e-commerce operations, then scale or roll up similar brands.",
-        "risks": ["Small scale", "Margin pressure in eco products", "Competition increasing"],
-        "opportunity": "Solid learning acquisition. Could be grown significantly with better marketing. Email list and reviews are real assets."
-      },
-      "businessModel": "E-commerce",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-34428",
-      "source": "brookz",
-      "title": "Dog Products Webshop",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-voor-honden/34428",
-      "category": "E-commerce",
-      "description": "Dog products webshop with proprietary SaaS-based backoffice system. Source code owned by the company. Seeking €200K investment for expansion.",
-      "financials": {
-        "revenue": 180000
-      },
-      "location": "Netherlands",
-      "highlights": [
-        "€180K revenue",
-        "Pet niche = passionate customers",
-        "Proprietary software/backoffice",
-        "Looking for €200K investment"
-      ],
-      "analysis": {
-        "verdict": "INTERESTING - PET MARKET",
-        "uspCopyable": "High - pet e-commerce is proven model",
-        "reasoning": "Pet owners spend irrationally on their animals. Repeat purchases, emotional buying. The proprietary backoffice is unusual - need to understand why they built custom software. Could be overengineering or could be a real asset.",
-        "risks": ["Competition from Pets Place, Bol, Amazon", "Why custom software?", "Seeking investment not sale"],
-        "opportunity": "Pet niche has legs. If the software is actually useful, could be spun off or licensed."
-      },
-      "businessModel": "E-commerce",
-      "onlineOnly": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-36829",
-      "source": "brookz",
-      "title": "Children's Room Products Webshop",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-kinderkamerartikelen-1/36829",
-      "category": "E-commerce",
-      "description": "Webshop specializing in children's room furniture and accessories.",
-      "financials": {
-        "revenue": 165000
-      },
-      "location": "Netherlands",
-      "highlights": [
-        "€165K revenue",
-        "Kids furniture = high ticket items",
-        "Parents spend on kids"
-      ],
-      "analysis": {
-        "verdict": "NEUTRAL",
-        "uspCopyable": "Medium",
-        "reasoning": "Kids furniture is a decent niche - parents spend. But it's likely bulky items requiring warehousing/logistics. Higher ticket but also higher complexity. Need to verify if dropship or inventory-based.",
-        "risks": ["Logistics for furniture", "Competition from IKEA, Bol", "Seasonal (before school, etc.)"],
-        "opportunity": "Could work if operations are lean. Not exciting but stable."
-      },
-      "businessModel": "E-commerce",
-      "onlineOnly": false,
-      "dateAdded": "2026-01-20"
-    },
-    {
       "id": "brookz-32418",
       "source": "brookz",
       "title": "Contact Lenses E-commerce",
@@ -470,30 +628,31 @@
       "dateAdded": "2026-01-20"
     },
     {
-      "id": "brookz-36976",
+      "id": "brookz-40272",
       "source": "brookz",
-      "title": "B2B Wholesale Software Platform",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/online-platform-groothandel/36976",
-      "category": "SaaS",
-      "description": "Online platform for wholesale. 2023 was investment year in ICT. Q1 2024 revenue was €138K already.",
+      "title": "Web Agency (€150K+ Recurring)",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webbureau-150k-recurring-omzet-per-jaar/40272",
+      "category": "Agency",
+      "description": "Web agency building websites, webshops, and custom software. Offers smart tools, dashboards, and integrations. €150K+ in recurring annual revenue from maintenance/hosting contracts.",
       "financials": {
-        "revenue": 150000
+        "revenue": 150000,
+        "recurringRevenue": 100
       },
       "location": "Netherlands",
       "highlights": [
-        "€150K revenue (Q1 2024 = €138K)",
-        "B2B wholesale platform",
-        "Heavy ICT investment in 2023",
-        "Growing fast"
+        "€150K+ recurring revenue",
+        "100% of stated revenue is recurring",
+        "Hosting/maintenance contracts",
+        "Custom software capabilities"
       ],
       "analysis": {
-        "verdict": "NEEDS MORE INFO",
-        "uspCopyable": "Unknown - need to understand the platform",
-        "reasoning": "Q1 at €138K suggests ~€500K+ annual run rate if sustained. The 2023 investment could mean they're past the hard part. But 'wholesale platform' is vague - need to understand the specific niche and stickiness.",
-        "risks": ["Unproven at scale", "B2B sales complexity", "Investment may not pay off"],
-        "opportunity": "If growth continues, could be a sleeper. Worth investigating further."
+        "verdict": "INTERESTING - SMALL BUT RECURRING",
+        "uspCopyable": "Medium - recurring model is replicable",
+        "reasoning": "The recurring angle changes things. If it's truly €150K recurring from hosting/maintenance with minimal work, this is more like a micro-SaaS than an agency. Need to verify actual work required to maintain.",
+        "risks": ["Client churn", "Tech support burden", "May need ongoing development"],
+        "opportunity": "If the recurring is truly passive (just hosting), this is a cash-flow asset. Stack multiple similar acquisitions."
       },
-      "businessModel": "B2B SaaS/Platform",
+      "businessModel": "Productized Service / SaaS-like",
       "onlineOnly": true,
       "dateAdded": "2026-01-20"
     }
@@ -502,40 +661,42 @@
     {
       "id": "saas",
       "name": "SaaS",
-      "count": 25,
       "description": "Software as a Service businesses with recurring revenue models"
     },
     {
       "id": "ecommerce",
       "name": "E-commerce",
-      "count": 149,
       "description": "Online shops and e-commerce businesses"
+    },
+    {
+      "id": "content",
+      "name": "Content",
+      "description": "Content sites, blogs, and media properties"
     },
     {
       "id": "platform",
       "name": "Platform",
-      "count": 42,
       "description": "Marketplace and community platforms"
     },
     {
       "id": "agency",
       "name": "Agency",
-      "count": 18,
       "description": "Digital marketing and web agencies"
     }
   ],
   "marketInsights": {
     "ebitdaMultiples": {
-      "ecommerce": { "low": 4.6, "high": 5.7 },
-      "software": { "low": 5.9, "high": 7.2 },
-      "marketing": { "low": 3.3, "high": 4.0 },
+      "saas": { "low": 3.0, "high": 10.0 },
+      "ecommerce": { "low": 2.0, "high": 4.0 },
+      "content": { "low": 1.5, "high": 3.0 },
       "average": 4.9
     },
     "trends": [
-      "Dutch consumers expect to make 40% of purchases online by 2025",
-      "Buyer's market - acquisition prices at 2-4x gross profit",
-      "Smaller targets: 2-2.5x EBITDA typical",
-      "Growing interest in online-only, automated businesses"
+      "SaaS commands 6-10x revenue multiples for profitable businesses",
+      "AI-enabled SaaS commanding premium valuations in 2025",
+      "$100K-$500K deal range is the market 'sweet spot'",
+      "Professional buyers targeting $500K-$5M segment aggressively",
+      "37% of 2025 buyers were repeat acquirers"
     ]
   }
 }
