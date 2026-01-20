@@ -51,6 +51,20 @@ class BRSniper {
         document.getElementById('source-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('revenue-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('sort-filter').addEventListener('change', () => this.applyFilters());
+
+        // Apply initial sort
+        this.applyFilters();
+    }
+
+    getVerdictScore(verdict) {
+        if (!verdict) return 0;
+        const v = verdict.toUpperCase();
+        if (v.includes('GEM')) return 5;
+        if (v.includes('EXCELLENT')) return 4;
+        if (v.includes('INTERESTING')) return 3;
+        if (v.includes('NEUTRAL') || v.includes('NICHE') || v.includes('NEEDS MORE')) return 2;
+        if (v.includes('SKIP')) return 1;
+        return 2;
     }
 
     applyFilters() {
@@ -84,8 +98,8 @@ class BRSniper {
         // Sort
         this.filteredListings.sort((a, b) => {
             switch (sortFilter) {
-                case 'rating':
-                    return (b.rating || 0) - (a.rating || 0);
+                case 'verdict':
+                    return this.getVerdictScore(b.analysis?.verdict) - this.getVerdictScore(a.analysis?.verdict);
                 case 'revenue':
                     return (b.financials?.revenue || 0) - (a.financials?.revenue || 0);
                 case 'date':
@@ -112,6 +126,16 @@ class BRSniper {
         grid.innerHTML = this.filteredListings.map(listing => this.createListingCard(listing)).join('');
     }
 
+    getVerdictClass(verdict) {
+        if (!verdict) return '';
+        const v = verdict.toUpperCase();
+        if (v.includes('GEM')) return 'verdict-gem';
+        if (v.includes('EXCELLENT')) return 'verdict-excellent';
+        if (v.includes('INTERESTING')) return 'verdict-interesting';
+        if (v.includes('SKIP')) return 'verdict-skip';
+        return 'verdict-neutral';
+    }
+
     createListingCard(listing) {
         const revenue = listing.financials?.revenue
             ? this.formatCurrency(listing.financials.revenue)
@@ -119,56 +143,85 @@ class BRSniper {
 
         const ebitda = listing.financials?.ebitda
             ? this.formatCurrency(listing.financials.ebitda)
-            : 'Not disclosed';
+            : '-';
 
-        const employees = listing.employees !== undefined
-            ? listing.employees === 0 ? 'None (automated)' : listing.employees
-            : 'Not disclosed';
+        const employees = listing.employees !== undefined && listing.employees !== null
+            ? listing.employees === 0 ? 'None' : listing.employees
+            : '-';
 
-        const rating = listing.rating
-            ? '★'.repeat(listing.rating) + '☆'.repeat(5 - listing.rating)
-            : '';
+        const recurring = listing.financials?.recurringRevenue
+            ? `${listing.financials.recurringRevenue}%`
+            : '-';
 
-        const highlights = listing.highlights?.slice(0, 3).map(h =>
+        const highlights = listing.highlights?.slice(0, 4).map(h =>
             `<span class="highlight-tag">${h}</span>`
         ).join('') || '';
 
         const categoryClass = listing.category.toLowerCase().replace(/\s+/g, '-');
         const sourceName = this.data.sources.find(s => s.id === listing.source)?.name || listing.source;
 
+        // Analysis section
+        const analysis = listing.analysis;
+        const verdictClass = this.getVerdictClass(analysis?.verdict);
+
+        const analysisHtml = analysis ? `
+            <div class="listing-analysis">
+                <div class="verdict ${verdictClass}">${analysis.verdict}</div>
+                <div class="analysis-details">
+                    <p class="reasoning">${analysis.reasoning}</p>
+                    <div class="analysis-meta">
+                        <span class="copyable"><strong>Copyable:</strong> ${analysis.uspCopyable}</span>
+                    </div>
+                    ${analysis.risks?.length ? `
+                        <div class="risks">
+                            <strong>Risks:</strong> ${analysis.risks.join(' · ')}
+                        </div>
+                    ` : ''}
+                    ${analysis.opportunity ? `
+                        <div class="opportunity">
+                            <strong>Opportunity:</strong> ${analysis.opportunity}
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        ` : '';
+
         return `
-            <article class="listing-card">
+            <article class="listing-card ${verdictClass}">
                 <div class="listing-header">
-                    <span class="listing-category ${categoryClass}">${listing.category}</span>
+                    <div class="listing-meta">
+                        <span class="listing-category ${categoryClass}">${listing.category}</span>
+                        <span class="listing-revenue">${revenue}</span>
+                    </div>
                     <h3 class="listing-title">${listing.title}</h3>
-                    <div class="listing-rating">${rating}</div>
                 </div>
                 <div class="listing-body">
                     <p class="listing-description">${listing.description}</p>
                     <div class="listing-metrics">
                         <div class="metric">
-                            <div class="metric-label">Revenue</div>
                             <div class="metric-value">${revenue}</div>
+                            <div class="metric-label">Revenue</div>
                         </div>
                         <div class="metric">
-                            <div class="metric-label">EBITDA</div>
                             <div class="metric-value">${ebitda}</div>
+                            <div class="metric-label">EBITDA</div>
                         </div>
                         <div class="metric">
-                            <div class="metric-label">Employees</div>
+                            <div class="metric-value">${recurring}</div>
+                            <div class="metric-label">Recurring</div>
+                        </div>
+                        <div class="metric">
                             <div class="metric-value">${employees}</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-label">Location</div>
-                            <div class="metric-value">${listing.location || 'Netherlands'}</div>
+                            <div class="metric-label">Employees</div>
                         </div>
                     </div>
                     ${highlights ? `<div class="listing-highlights">${highlights}</div>` : ''}
+                    ${analysisHtml}
                 </div>
                 <div class="listing-footer">
                     <span class="listing-source">via ${sourceName}</span>
                     <a href="${listing.url}" target="_blank" rel="noopener" class="listing-link">
-                        View Details →
+                        View on ${sourceName} →
                     </a>
                 </div>
             </article>
@@ -188,9 +241,9 @@ class BRSniper {
                     <span class="multiple-range">${range.low}x - ${range.high}x</span>
                 </div>
             `).join('') + `
-                <div class="multiple-item">
-                    <span class="multiple-sector"><strong>Average (all sectors)</strong></span>
-                    <span class="multiple-range"><strong>${multiples.average}x</strong></span>
+                <div class="multiple-item average">
+                    <span class="multiple-sector">Average (all sectors)</span>
+                    <span class="multiple-range">${multiples.average}x</span>
                 </div>
             `;
 
@@ -206,7 +259,7 @@ class BRSniper {
             .map(cat => `
                 <div class="category-item">
                     <span class="category-name">${cat.name}</span>
-                    <span class="category-count">${cat.count}</span>
+                    <span class="category-count">${cat.count} on Brookz</span>
                 </div>
             `).join('');
     }
@@ -216,7 +269,7 @@ class BRSniper {
         sourcesGrid.innerHTML = this.data.sources.map(source => `
             <div class="source-card">
                 <h3>${source.name}</h3>
-                <div class="country">${source.country}</div>
+                <div class="source-country">${source.country}</div>
                 <p>${source.description}</p>
                 <a href="${source.url}" target="_blank" rel="noopener" class="source-link">
                     Visit Source →

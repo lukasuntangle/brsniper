@@ -11,6 +11,62 @@
   ],
   "listings": [
     {
+      "id": "brookz-36971",
+      "source": "brookz",
+      "title": "Webshop in Screws & Hardware (B2B)",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-schroeven-en-aanverwante-artikelen/36971",
+      "category": "E-commerce",
+      "description": "B2B webshop specializing in screws and related hardware items. Strong position in construction/industrial supply niche.",
+      "financials": {
+        "revenue": 2400000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€2.4M revenue - significant scale",
+        "B2B focus = larger order values",
+        "Construction/industrial niche",
+        "Repeat purchase product category"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING",
+        "uspCopyable": "Medium - requires supplier relationships and inventory management",
+        "reasoning": "B2B e-commerce in boring-but-essential products. High revenue but likely needs warehouse operations. Good if you want to run a 'real' business, not a lifestyle play.",
+        "risks": ["Inventory requirements", "Logistics complexity", "Price competition from wholesalers"],
+        "opportunity": "Consolidation play - acquire and roll up similar niche B2B webshops"
+      },
+      "businessModel": "B2B E-commerce",
+      "onlineOnly": false,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-33482",
+      "source": "brookz",
+      "title": "Webshop in Sports Articles",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-sportartikelen/33482",
+      "category": "E-commerce",
+      "description": "Established sports equipment webshop since 2011. Located in central Netherlands with over €2.5M annual revenue.",
+      "financials": {
+        "revenue": 2500000
+      },
+      "employees": null,
+      "location": "Central Netherlands",
+      "highlights": [
+        "€2.5M revenue",
+        "13+ years in business (since 2011)",
+        "Established brand and customer base"
+      ],
+      "analysis": {
+        "verdict": "SKIP",
+        "uspCopyable": "Low - competing with Decathlon, Bol.com sports, Amazon",
+        "reasoning": "Sports is hyper-competitive. You're fighting Amazon, Decathlon, and every marketplace. Unless there's a specific sub-niche (climbing gear, archery, etc.), margins will be squeezed.",
+        "risks": ["Intense competition", "Brand dependency", "Seasonal demand"],
+        "opportunity": "Only interesting if it owns a unique brand or has exclusive supplier deals"
+      },
+      "businessModel": "E-commerce",
+      "onlineOnly": false,
+      "dateAdded": "2026-01-20"
+    },
+    {
       "id": "brookz-40672",
       "source": "brookz",
       "title": "SaaS Platform & IoT Systems Integrator",
@@ -27,224 +83,418 @@
       "location": "Randstad, Netherlands",
       "highlights": [
         "95% recurring revenue",
-        "85% of customers are 5+ year relationships",
-        "30% of customers are 10+ year partners",
-        "80% gross margin",
-        "Highly automated operations"
+        "€720K EBITDA (55% margin!)",
+        "Only 4 employees",
+        "80% gross margin"
       ],
+      "analysis": {
+        "verdict": "EXCELLENT BUSINESS - BUT NOT COPYABLE",
+        "uspCopyable": "Very Low - 20 years of relationships and trust",
+        "reasoning": "This is a phenomenal business: 95% recurring, 55% EBITDA margin, 4 employees. BUT it's built on 20 years of enterprise relationships. You can't copy this - you'd have to buy it. If you have €3-5M, this is a cash cow.",
+        "risks": ["Key person dependency", "Technology obsolescence", "Enterprise sales cycle"],
+        "opportunity": "Buy and hold for cash flow. Don't try to replicate."
+      },
       "businessModel": "B2B SaaS",
       "onlineOnly": true,
-      "rating": 5,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-38990",
+      "source": "brookz",
+      "title": "Health & Wellness Brand",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/bedrijf-gezondheid-welzijn-producten/38990",
+      "category": "E-commerce",
+      "description": "Established brand in health and wellness products with strong platform presence. Location-independent operations.",
+      "financials": {
+        "revenue": 1160000
+      },
+      "location": "Location Independent",
+      "highlights": [
+        "€1.16M revenue",
+        "Health/wellness = growing market",
+        "Location independent",
+        "Brand-based business"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING",
+        "uspCopyable": "Medium - brand building takes time but model is replicable",
+        "reasoning": "Health & wellness is a strong category with good margins. If they own the brand (not just reselling), this has real value. Location-independent is a plus. Need to verify if it's D2C brand or just a reseller.",
+        "risks": ["Brand dependency", "Regulatory (health claims)", "Influencer/marketing costs"],
+        "opportunity": "If it's a real brand with repeat customers, could be a solid foundation to expand product line"
+      },
+      "businessModel": "D2C Brand / E-commerce",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-37728",
+      "source": "brookz",
+      "title": "Webshop Charging Stations (EV)",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-laadpalen-1/37728",
+      "category": "E-commerce",
+      "description": "Fast-growing webshop in EV charging stations (A-brands) for home and business use. Achieved strong revenue/profit in first year without Google ads. Active on NL/BE domains and Bol.com.",
+      "financials": {
+        "revenue": 500000
+      },
+      "location": "Netherlands/Belgium",
+      "highlights": [
+        "€500K revenue",
+        "EV charging = massive growth market",
+        "Profitable in year 1 without ads",
+        "Multi-market (NL + BE)",
+        "Also on Bol.com"
+      ],
+      "analysis": {
+        "verdict": "GEM - TIMING IS RIGHT",
+        "uspCopyable": "High - the model is straightforward but timing matters",
+        "reasoning": "EV adoption is accelerating. Home charging is mandatory for EV owners. This is a TIMING play - the market is growing 30%+ annually. Profitable without ads means organic/word-of-mouth is working. B2B fleet charging is even higher margin.",
+        "risks": ["Competition increasing", "Installation partnerships needed", "Price pressure from manufacturers going direct"],
+        "opportunity": "Ride the EV wave. Expand to installation services, maintenance contracts, B2B fleet deals."
+      },
+      "businessModel": "E-commerce",
+      "onlineOnly": true,
       "dateAdded": "2026-01-20"
     },
     {
       "id": "brookz-41400",
       "source": "brookz",
-      "title": "SaaS Data Integration & Workflow Management Platform",
+      "title": "SaaS Data Integration & Workflow Platform",
       "url": "https://www.brookz.nl/bedrijven-te-koop/saas-data-integratie-en-workflow-managementplatform/41400",
       "category": "SaaS",
-      "description": "Innovative no-code SaaS platform for data integration and workflow management. Serves construction and installation sector. Has built first-of-its-kind AI application for Dutch government currently being rolled out nationally.",
+      "description": "No-code SaaS platform for data integration and workflow management. Outperforms Dell Boomi, Workato, and Power Automate according to seller. Has AI application for Dutch government being rolled out nationally.",
       "financials": {
         "revenue": 400000
       },
       "location": "Netherlands",
       "highlights": [
+        "€400K revenue",
         "No-code platform",
-        "AI application for government",
-        "First in NL to complete DPIA and IAMA processes",
-        "National rollout in progress"
+        "Claims to outperform enterprise tools",
+        "Government AI contract (national rollout)"
       ],
+      "analysis": {
+        "verdict": "HIGH RISK / HIGH REWARD",
+        "uspCopyable": "Low - significant tech investment already made",
+        "reasoning": "The government contract is interesting but government sales cycles are brutal (18+ months). The 'outperforms Boomi/Workato' claim needs verification. If true, could be a sleeper. If not, it's a niche tool with limited growth.",
+        "risks": ["Government dependency", "Long sales cycles", "Competing with well-funded players"],
+        "opportunity": "If the tech is real, this could be acquired by a larger player. Government reference is valuable."
+      },
       "businessModel": "B2B SaaS",
       "onlineOnly": true,
-      "rating": 4,
       "dateAdded": "2026-01-20"
     },
     {
-      "id": "brookz-34400",
+      "id": "brookz-39593",
       "source": "brookz",
-      "title": "E-commerce Platform (SaaS) for Short Chain Market",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/e-commerce-platform-saas-voor-de-korte-keten-markt/34400",
+      "title": "International ERP Software Company",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/internationaal-erp-softwarebedrijf/39593",
       "category": "SaaS",
-      "description": "End-to-end SaaS platform for short chain initiatives connecting local producers to consumers. Covers communication, ordering, payments, and logistics. Proven in Amsterdam (local entrepreneurs) and Brabant (farmers).",
-      "financials": {},
-      "location": "Netherlands",
-      "highlights": [
-        "Built with latest tools and infrastructure",
-        "End-to-end platform",
-        "Proven concept in multiple regions",
-        "Full code, documentation, and IP included"
-      ],
-      "businessModel": "B2B SaaS Platform",
-      "onlineOnly": true,
-      "rating": 3,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-34116",
-      "source": "brookz",
-      "title": "Social Media Automation Tool (SaaS)",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/social-media-automation-tool-saas/34116",
-      "category": "SaaS",
-      "description": "SaaS tool for automating social media management and scheduling.",
-      "financials": {},
-      "location": "Netherlands",
-      "highlights": [
-        "Automated social media management",
-        "SaaS model with recurring revenue potential"
-      ],
-      "businessModel": "B2B/B2C SaaS",
-      "onlineOnly": true,
-      "rating": 3,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-34145",
-      "source": "brookz",
-      "title": "SaaS Application for Business Service Providers",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/direct-inzetbare-saas-applicatie-voor-zakelijke-dienstverleners-1/34145",
-      "category": "SaaS",
-      "description": "Ready-to-deploy SaaS application for business service providers. Applications include corporate emergency organization setup and cyber awareness for SMEs. Broad applicability with joint venture opportunities.",
-      "financials": {},
-      "location": "Netherlands",
-      "highlights": [
-        "Ready to deploy immediately",
-        "Cyber awareness for SME market",
-        "Joint venture opportunities",
-        "Multiple use cases"
-      ],
-      "businessModel": "B2B SaaS",
-      "onlineOnly": true,
-      "rating": 3,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-39244",
-      "source": "brookz",
-      "title": "E-commerce Business with 3 Brands",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/e-commerce-bedrijf-met-3-merken/39244",
-      "category": "E-commerce",
-      "description": "Three fully branded e-commerce brands registered with BOIP, active on Bol.com and Shopify. Stable sales record with strong growth potential. Fully automated operations with no fixed employees.",
-      "financials": {},
-      "employees": 0,
-      "location": "Netherlands",
-      "highlights": [
-        "3 registered brands (BOIP)",
-        "Active on Bol.com and Shopify",
-        "No fixed employees",
-        "Largely automated",
-        "No physical premises - low overhead",
-        "Maximum flexibility"
-      ],
-      "businessModel": "E-commerce / Marketplace",
-      "onlineOnly": true,
-      "rating": 4,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-35451",
-      "source": "brookz",
-      "title": "Webshop in Medical Articles",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-medische-artikelen/35451",
-      "category": "E-commerce",
-      "description": "Established webshop specializing in medical articles and supplies.",
+      "description": "ERP software with modular architecture supporting 5 languages. Active in 5 countries. 40% of annual revenue comes in January (annual contracts), covering all yearly costs.",
       "financials": {
-        "revenue": 900000
+        "revenue": 300000,
+        "recurringRevenue": 40
+      },
+      "location": "International (5 countries)",
+      "highlights": [
+        "€300K revenue",
+        "40% recurring in January (annual prepay)",
+        "5 languages, 5 countries",
+        "Modular ERP system"
+      ],
+      "analysis": {
+        "verdict": "NICHE OPPORTUNITY",
+        "uspCopyable": "Low - ERP is complex and requires years of development",
+        "reasoning": "ERP is sticky but small at €300K. The 40% January prepay is nice cash flow. International presence is interesting but also complex. This is a lifestyle business for someone who wants to maintain an ERP product.",
+        "risks": ["Tech debt", "Support burden", "Competition from cloud ERP (Odoo, etc.)"],
+        "opportunity": "Could be a base for vertical-specific ERP plays if you can niche down further"
+      },
+      "businessModel": "B2B SaaS",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-34602",
+      "source": "brookz",
+      "title": "Online Marketing Agency (E-commerce Focus)",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/online-marketing-agency/34602",
+      "category": "Agency",
+      "description": "Founded 2018, specializing in e-commerce. Services include social media advertising, design, email marketing, and webshop development. Currently in exclusive negotiations.",
+      "financials": {
+        "revenue": 657000
       },
       "location": "Netherlands",
       "highlights": [
-        "Strong revenue of 900K",
-        "Medical/healthcare niche",
-        "Established customer base"
+        "€657K revenue",
+        "E-commerce specialization",
+        "Founded 2018 - 8 years track record",
+        "Full service (ads, email, dev)"
       ],
+      "analysis": {
+        "verdict": "SKIP - PEOPLE BUSINESS",
+        "uspCopyable": "N/A - you don't want to copy this",
+        "reasoning": "You said it yourself - you don't want to build a 10-year agency. This is a people business. Revenue walks out the door every night. Pass.",
+        "risks": ["Employee dependency", "Client concentration", "Constant sales needed"],
+        "opportunity": "None for you - this is for someone who wants to run an agency"
+      },
+      "businessModel": "Agency",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-34987",
+      "source": "brookz",
+      "title": "Online Marketing Bureau",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/online-marketing-bureau/34987",
+      "category": "Agency",
+      "description": "Healthy, profitable marketing bureau with 5 FTE + 2 owners + freelancers. Looking for entrepreneur to become part-owner and take over daily operations within ~3 years.",
+      "financials": {
+        "revenue": 500000
+      },
+      "employees": 7,
+      "location": "Netherlands",
+      "highlights": [
+        "€500K revenue",
+        "5 FTE + 2 owners",
+        "Profitable",
+        "3-year transition plan"
+      ],
+      "analysis": {
+        "verdict": "SKIP - SAME REASON",
+        "uspCopyable": "N/A",
+        "reasoning": "Same as above. People business, 7+ employees, you'd be buying a job. The 3-year transition plan means the current owners know it's not passive.",
+        "risks": ["All agency risks"],
+        "opportunity": "Only if you actually want to run an agency"
+      },
+      "businessModel": "Agency",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-40272",
+      "source": "brookz",
+      "title": "Web Agency (€150K+ Recurring)",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webbureau-150k-recurring-omzet-per-jaar/40272",
+      "category": "Agency",
+      "description": "Web agency building websites, webshops, and custom software. Offers smart tools, dashboards, and integrations. €150K+ in recurring annual revenue from maintenance/hosting contracts.",
+      "financials": {
+        "revenue": 150000,
+        "recurringRevenue": 100
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€150K+ recurring revenue",
+        "100% of stated revenue is recurring",
+        "Hosting/maintenance contracts",
+        "Custom software capabilities"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING - SMALL BUT RECURRING",
+        "uspCopyable": "Medium - recurring model is replicable",
+        "reasoning": "The recurring angle changes things. If it's truly €150K recurring from hosting/maintenance with minimal work, this is more like a micro-SaaS than an agency. Need to verify actual work required to maintain.",
+        "risks": ["Client churn", "Tech support burden", "May need ongoing development"],
+        "opportunity": "If the recurring is truly passive (just hosting), this is a cash-flow asset. Stack multiple similar acquisitions."
+      },
+      "businessModel": "Productized Service / SaaS-like",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-36284",
+      "source": "brookz",
+      "title": "Smart Home IoT Brand",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/smart-home-iot-merk/36284",
+      "category": "E-commerce",
+      "description": "Consumer IoT startup with D2C webshop, marketplace presence, and retail distribution. Large mailing list. Seeking acquisition or investment partner for growth.",
+      "financials": {
+        "revenue": 245000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€245K revenue",
+        "Own brand (not reseller)",
+        "D2C + marketplaces + retail",
+        "Large mailing list",
+        "Smart home = growing market"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING - BRAND PLAY",
+        "uspCopyable": "Medium - brand building is work but model is clear",
+        "reasoning": "Smart home is hot. If they own the brand and product design (even if manufactured in China), there's real value here. D2C + marketplaces + retail is good diversification. Large mailing list is an asset.",
+        "risks": ["Hardware margins", "Competition from big tech", "Quality control"],
+        "opportunity": "Could be expanded with more products under the brand. Smart home ecosystem play."
+      },
+      "businessModel": "D2C Brand",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-37160",
+      "source": "brookz",
+      "title": "Niche Marketplace + Forum",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/niche-marktplaats-en-forum-1/37160",
+      "category": "Platform",
+      "description": "Combined Dutch marketplace and forum since 2006. 140K unique monthly visitors. Fully automated with low operational costs. Asking price €550K.",
+      "financials": {
+        "revenue": 90000,
+        "askingPrice": 550000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€90K revenue",
+        "140K monthly uniques",
+        "Since 2006 (18 years!)",
+        "Fully automated",
+        "Community + marketplace combo"
+      ],
+      "analysis": {
+        "verdict": "GEM - COMMUNITY MOAT",
+        "uspCopyable": "High concept, Low execution - community takes years to build",
+        "reasoning": "18 years of SEO authority and community trust. 140K monthly visitors is real traffic. Fully automated = true passive income. €550K asking on €90K revenue is ~6x which is fair for a passive asset. The community moat is real - you can't easily replicate 18 years of trust.",
+        "risks": ["Platform decline (forums are old-school)", "Single-niche dependency", "Traffic source risk"],
+        "opportunity": "Buy for cash flow + optionality. Could modernize (Discord, app) to re-engage community. The model is copyable - pick another niche and build over 3-5 years."
+      },
+      "businessModel": "Marketplace / Community",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-36404",
+      "source": "brookz",
+      "title": "Sustainable Products Webshop",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webwinkel-met-duurzame-artikelen/36404",
+      "category": "E-commerce",
+      "description": "Successful eco-friendly products webshop. 4.5 years old with 10K Instagram followers, 7K email list, 25% repeat purchase rate, and 4.9 Trustpilot score (500+ reviews).",
+      "financials": {
+        "revenue": 130000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€130K revenue",
+        "10K Instagram followers",
+        "7K email list",
+        "25% repeat purchase rate",
+        "4.9 Trustpilot (500+ reviews)"
+      ],
+      "analysis": {
+        "verdict": "SMALL BUT SOLID FOUNDATION",
+        "uspCopyable": "High - sustainability niche is accessible",
+        "reasoning": "Small revenue but strong fundamentals: 25% repeat rate, great reviews, engaged audience. Sustainability is a growing market. This is a 'starter acquisition' - buy it, learn e-commerce operations, then scale or roll up similar brands.",
+        "risks": ["Small scale", "Margin pressure in eco products", "Competition increasing"],
+        "opportunity": "Solid learning acquisition. Could be grown significantly with better marketing. Email list and reviews are real assets."
+      },
       "businessModel": "E-commerce",
       "onlineOnly": true,
-      "rating": 4,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-34428",
+      "source": "brookz",
+      "title": "Dog Products Webshop",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-voor-honden/34428",
+      "category": "E-commerce",
+      "description": "Dog products webshop with proprietary SaaS-based backoffice system. Source code owned by the company. Seeking €200K investment for expansion.",
+      "financials": {
+        "revenue": 180000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€180K revenue",
+        "Pet niche = passionate customers",
+        "Proprietary software/backoffice",
+        "Looking for €200K investment"
+      ],
+      "analysis": {
+        "verdict": "INTERESTING - PET MARKET",
+        "uspCopyable": "High - pet e-commerce is proven model",
+        "reasoning": "Pet owners spend irrationally on their animals. Repeat purchases, emotional buying. The proprietary backoffice is unusual - need to understand why they built custom software. Could be overengineering or could be a real asset.",
+        "risks": ["Competition from Pets Place, Bol, Amazon", "Why custom software?", "Seeking investment not sale"],
+        "opportunity": "Pet niche has legs. If the software is actually useful, could be spun off or licensed."
+      },
+      "businessModel": "E-commerce",
+      "onlineOnly": true,
+      "dateAdded": "2026-01-20"
+    },
+    {
+      "id": "brookz-36829",
+      "source": "brookz",
+      "title": "Children's Room Products Webshop",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-in-kinderkamerartikelen-1/36829",
+      "category": "E-commerce",
+      "description": "Webshop specializing in children's room furniture and accessories.",
+      "financials": {
+        "revenue": 165000
+      },
+      "location": "Netherlands",
+      "highlights": [
+        "€165K revenue",
+        "Kids furniture = high ticket items",
+        "Parents spend on kids"
+      ],
+      "analysis": {
+        "verdict": "NEUTRAL",
+        "uspCopyable": "Medium",
+        "reasoning": "Kids furniture is a decent niche - parents spend. But it's likely bulky items requiring warehousing/logistics. Higher ticket but also higher complexity. Need to verify if dropship or inventory-based.",
+        "risks": ["Logistics for furniture", "Competition from IKEA, Bol", "Seasonal (before school, etc.)"],
+        "opportunity": "Could work if operations are lean. Not exciting but stable."
+      },
+      "businessModel": "E-commerce",
+      "onlineOnly": false,
       "dateAdded": "2026-01-20"
     },
     {
       "id": "brookz-32418",
       "source": "brookz",
-      "title": "E-commerce Business in Optical Articles",
+      "title": "Contact Lenses E-commerce",
       "url": "https://www.brookz.nl/bedrijven-te-koop/e-commerceonderneming-in-optische-artikelen/32418",
       "category": "E-commerce",
-      "description": "Specialized e-commerce business in contact lenses and related optical products.",
+      "description": "Specialized e-commerce business in contact lenses and related optical products. Built-in recurring revenue model.",
       "financials": {
         "revenue": 200000
       },
       "location": "Netherlands",
       "highlights": [
-        "Specialized niche market",
-        "Recurring customer needs (contact lenses)",
-        "200K annual revenue"
+        "€200K revenue",
+        "Contact lenses = RECURRING",
+        "Medical necessity = stable demand",
+        "Subscription potential"
       ],
-      "businessModel": "E-commerce",
-      "onlineOnly": true,
-      "rating": 3,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-38004",
-      "source": "brookz",
-      "title": "Wine Webshop - Dropship & E-commerce",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/webshop-wijn-dropship-en-ecom/38004",
-      "category": "E-commerce",
-      "description": "Wine webshop built on Shopify with customized theme. Operates on dropship model - no inventory needed.",
-      "financials": {},
-      "location": "Netherlands",
-      "highlights": [
-        "Dropship model - no inventory",
-        "Built on Shopify",
-        "Customized theme",
-        "Wine/alcohol niche"
-      ],
-      "businessModel": "Dropshipping",
-      "onlineOnly": true,
-      "rating": 3,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "brookz-30989",
-      "source": "brookz",
-      "title": "Digital Marketing Agency",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/digital-marketing-agency-1/30989",
-      "category": "Digital Services",
-      "description": "All-round digital marketing agency founded in 2016. Team of 10-20 experts providing full-service digital marketing solutions.",
-      "financials": {
-        "revenue": 1682000,
-        "ebitda": 650000
+      "analysis": {
+        "verdict": "INTERESTING - SUBSCRIPTION POTENTIAL",
+        "uspCopyable": "Medium - but competing with Lensway, Vision Direct, etc.",
+        "reasoning": "Contact lenses are a subscription business in disguise. People need them monthly. €200K is small but could be a foundation. The question is why it hasn't grown more - is it operational limits or market saturation?",
+        "risks": ["Big players (Specsavers, Lensway)", "Price comparison is easy", "Prescription requirements"],
+        "opportunity": "Convert to subscription model if not already. Add eye care products. Small but potentially high-LTV customers."
       },
-      "employees": 15,
-      "location": "Netherlands",
-      "highlights": [
-        "Founded 2016, established track record",
-        "Strong growth: 900K to 1.68M revenue",
-        "EBITDA of 650K",
-        "10-20 driven experts",
-        "All-round digital services"
-      ],
-      "businessModel": "Agency / Services",
+      "businessModel": "E-commerce (Subscription potential)",
       "onlineOnly": true,
-      "rating": 4,
       "dateAdded": "2026-01-20"
     },
     {
-      "id": "brookz-41254",
+      "id": "brookz-36976",
       "source": "brookz",
-      "title": "SaaS Platforms for Boat Management & Rental",
-      "url": "https://www.brookz.nl/bedrijven-te-koop/saas-platformen-beheren-verhuren-van-boten/41254",
+      "title": "B2B Wholesale Software Platform",
+      "url": "https://www.brookz.nl/bedrijven-te-koop/online-platform-groothandel/36976",
       "category": "SaaS",
-      "description": "Digital platforms for boat management and rental being sold from bankruptcy. Cloud-based platforms offering opportunity for parties active in rental, leisure, platform technology, or digital services.",
-      "financials": {},
+      "description": "Online platform for wholesale. 2023 was investment year in ICT. Q1 2024 revenue was €138K already.",
+      "financials": {
+        "revenue": 150000
+      },
       "location": "Netherlands",
       "highlights": [
-        "Sale from bankruptcy - potential bargain",
-        "Cloud-based infrastructure",
-        "Boat/leisure niche",
-        "IP and platform included"
+        "€150K revenue (Q1 2024 = €138K)",
+        "B2B wholesale platform",
+        "Heavy ICT investment in 2023",
+        "Growing fast"
       ],
-      "businessModel": "B2C SaaS Platform",
+      "analysis": {
+        "verdict": "NEEDS MORE INFO",
+        "uspCopyable": "Unknown - need to understand the platform",
+        "reasoning": "Q1 at €138K suggests ~€500K+ annual run rate if sustained. The 2023 investment could mean they're past the hard part. But 'wholesale platform' is vague - need to understand the specific niche and stickiness.",
+        "risks": ["Unproven at scale", "B2B sales complexity", "Investment may not pay off"],
+        "opportunity": "If growth continues, could be a sleeper. Worth investigating further."
+      },
+      "businessModel": "B2B SaaS/Platform",
       "onlineOnly": true,
-      "rating": 2,
       "dateAdded": "2026-01-20"
     }
   ],
@@ -262,28 +512,16 @@
       "description": "Online shops and e-commerce businesses"
     },
     {
-      "id": "webshop",
-      "name": "Webshop",
-      "count": 99,
-      "description": "Web stores and online retail"
+      "id": "platform",
+      "name": "Platform",
+      "count": 42,
+      "description": "Marketplace and community platforms"
     },
     {
-      "id": "startup",
-      "name": "Startup",
-      "count": 114,
-      "description": "Early-stage companies with growth potential"
-    },
-    {
-      "id": "marketing",
-      "name": "Online Marketing",
-      "count": 6,
-      "description": "Digital marketing agencies and services"
-    },
-    {
-      "id": "dropship",
-      "name": "Dropshipping",
-      "count": 1,
-      "description": "No-inventory e-commerce businesses"
+      "id": "agency",
+      "name": "Agency",
+      "count": 18,
+      "description": "Digital marketing and web agencies"
     }
   ],
   "marketInsights": {
@@ -295,9 +533,9 @@
     },
     "trends": [
       "Dutch consumers expect to make 40% of purchases online by 2025",
-      "Number of webshop acquisitions continues to increase",
-      "Market is becoming buyer-friendly again",
-      "Typical acquisition prices: 2-4x gross profit"
+      "Buyer's market - acquisition prices at 2-4x gross profit",
+      "Smaller targets: 2-2.5x EBITDA typical",
+      "Growing interest in online-only, automated businesses"
     ]
   }
 }
