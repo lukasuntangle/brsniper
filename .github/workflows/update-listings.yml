@@ -59,18 +59,31 @@ jobs:
             const fs = require('fs');
             const digest = JSON.parse(fs.readFileSync('data/digest.json', 'utf8'));
 
-            if (digest.newListings.length === 0 && digest.manualReviewLinks.length === 0) {
+            let fundedDigest = { newStartups: [] };
+            try {
+              fundedDigest = JSON.parse(fs.readFileSync('data/funded-digest.json', 'utf8'));
+            } catch (e) {}
+
+            if (digest.newListings.length === 0 && digest.manualReviewLinks.length === 0 && fundedDigest.newStartups.length === 0) {
               console.log('No new items to report');
               return;
             }
 
-            let body = '## Daily Listings Digest\n\n';
+            let body = '## Daily Digest\n\n';
             body += `**Date:** ${new Date().toISOString().split('T')[0]}\n\n`;
 
             if (digest.newListings.length > 0) {
               body += '### New Listings Added Automatically\n\n';
               digest.newListings.forEach(l => {
                 body += `- **${l.title}** (${l.source}) - ${l.revenue || 'Revenue TBD'}\n`;
+              });
+              body += '\n';
+            }
+
+            if (fundedDigest.newStartups.length > 0) {
+              body += '### New Funded Startups\n\n';
+              fundedDigest.newStartups.forEach(s => {
+                body += `- **${s.company}** (${s.round}) - ${s.amount} - ${s.industry} - Copyability: ${s.copyability}/5\n`;
               });
               body += '\n';
             }
@@ -87,7 +100,7 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `📊 Daily Listings Digest - ${new Date().toISOString().split('T')[0]}`,
+              title: `📊 Daily Digest - ${new Date().toISOString().split('T')[0]}`,
               body: body,
               labels: ['digest', 'automated']
             });

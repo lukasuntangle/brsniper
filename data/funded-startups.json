@@ -31,6 +31,20 @@
       "url": "https://techstartups.com",
       "flag": "🌍",
       "description": "Global startup news"
+    },
+    {
+      "id": "hackernews",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "flag": "🟧",
+      "description": "Community-curated tech news"
+    },
+    {
+      "id": "producthunt",
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com",
+      "flag": "🐱",
+      "description": "New product launches"
     }
   ],
   "startups": [

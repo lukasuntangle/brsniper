@@ -1,10 +1,31 @@
 // BR Sniper - Business Acquisition Opportunities Tracker
 
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function isValidUrl(url) {
+    try {
+        const parsed = new URL(url);
+        return ['http:', 'https:'].includes(parsed.protocol);
+    } catch {
+        return false;
+    }
+}
+
 class BRSniper {
     constructor() {
         this.data = null;
         this.filteredListings = [];
         this.activeSource = 'all';
+        this.currentPage = 1;
+        this.pageSize = 24;
         this.init();
     }
 
@@ -21,50 +42,50 @@ class BRSniper {
     async loadData() {
         try {
             const response = await fetch('data/listings.json');
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
             this.data = await response.json();
             this.filteredListings = [...this.data.listings];
         } catch (error) {
-            console.error('Error loading data:', error);
+            const grid = document.getElementById('listings-grid');
+            if (grid) {
+                grid.innerHTML = '<div class="error-state"><p>Failed to load listings. Please try refreshing the page.</p></div>';
+            }
         }
     }
 
     setupSourceTabs() {
+        if (!this.data) return;
         const tabsContainer = document.getElementById('source-tabs');
 
-        // Update "All" count
         document.getElementById('count-all').textContent = this.data.listings.length;
 
-        // Create tabs for each source
         this.data.sources.forEach(source => {
             const count = this.data.listings.filter(l => l.source === source.id).length;
             const tab = document.createElement('button');
             tab.className = 'source-tab';
             tab.dataset.source = source.id;
             tab.innerHTML = `
-                <span class="tab-flag">${source.flag || ''}</span>
-                <span class="tab-name">${source.name}</span>
+                <span class="tab-flag">${escapeHtml(source.flag)}</span>
+                <span class="tab-name">${escapeHtml(source.name)}</span>
                 <span class="tab-count">${count}</span>
             `;
             tabsContainer.appendChild(tab);
         });
 
-        // Add click handlers
         tabsContainer.addEventListener('click', (e) => {
             const tab = e.target.closest('.source-tab');
             if (!tab) return;
 
-            // Update active state
             tabsContainer.querySelectorAll('.source-tab').forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
 
-            // Update filter
             this.activeSource = tab.dataset.source;
             this.applyFilters();
         });
     }
 
     setupFilters() {
-        // Populate category filter
+        if (!this.data) return;
         const categoryFilter = document.getElementById('category-filter');
         const categories = [...new Set(this.data.listings.map(l => l.category))];
         categories.forEach(cat => {
@@ -74,12 +95,26 @@ class BRSniper {
             categoryFilter.appendChild(option);
         });
 
-        // Add event listeners
+        const locationFilter = document.getElementById('location-filter');
+        const locations = [...new Set(
+            this.data.listings
+                .map(l => l.country || l.location)
+                .filter(Boolean)
+        )].sort();
+        locations.forEach(loc => {
+            const option = document.createElement('option');
+            option.value = loc;
+            option.textContent = loc;
+            locationFilter.appendChild(option);
+        });
+
         document.getElementById('category-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('revenue-filter').addEventListener('change', () => this.applyFilters());
+        document.getElementById('asking-price-filter').addEventListener('change', () => this.applyFilters());
+        document.getElementById('location-filter').addEventListener('change', () => this.applyFilters());
+        document.getElementById('business-age-filter').addEventListener('change', () => this.applyFilters());
         document.getElementById('sort-filter').addEventListener('change', () => this.applyFilters());
 
-        // Apply initial sort
         this.applyFilters();
     }
 
@@ -95,23 +130,33 @@ class BRSniper {
         return 2;
     }
 
+    parseBusinessAgeYears(ageStr) {
+        if (!ageStr) return null;
+        const lower = ageStr.toLowerCase();
+        const yearMatch = lower.match(/(\d+)\s*year/);
+        if (yearMatch) return parseInt(yearMatch[1]);
+        const monthMatch = lower.match(/(\d+)\s*month/);
+        if (monthMatch) return parseInt(monthMatch[1]) / 12;
+        return null;
+    }
+
     applyFilters() {
         const categoryFilter = document.getElementById('category-filter').value;
         const revenueFilter = parseInt(document.getElementById('revenue-filter').value);
+        const askingPriceFilter = parseInt(document.getElementById('asking-price-filter').value);
+        const locationFilter = document.getElementById('location-filter').value;
+        const businessAgeFilter = document.getElementById('business-age-filter').value;
         const sortFilter = document.getElementById('sort-filter').value;
 
         this.filteredListings = this.data.listings.filter(listing => {
-            // Source filter (from tabs)
             if (this.activeSource !== 'all' && listing.source !== this.activeSource) {
                 return false;
             }
 
-            // Category filter
             if (categoryFilter !== 'all' && listing.category.toLowerCase() !== categoryFilter) {
                 return false;
             }
 
-            // Revenue filter
             if (revenueFilter > 0) {
                 const revenue = listing.financials?.revenue || 0;
                 if (revenue < revenueFilter) {
@@ -119,16 +164,40 @@ class BRSniper {
                 }
             }
 
+            if (askingPriceFilter > 0) {
+                const price = listing.askingPrice || listing.financials?.askingPrice || 0;
+                if (price < askingPriceFilter) {
+                    return false;
+                }
+            }
+
+            if (locationFilter !== 'all') {
+                const listingLocation = listing.country || listing.location || '';
+                if (listingLocation !== locationFilter) {
+                    return false;
+                }
+            }
+
+            if (businessAgeFilter !== 'all') {
+                const ageYears = this.parseBusinessAgeYears(listing.businessAge);
+                const filterVal = parseInt(businessAgeFilter);
+                if (ageYears === null) return true;
+                if (filterVal === 1 && ageYears >= 1) return false;
+                if (filterVal === 3 && (ageYears < 1 || ageYears > 3)) return false;
+                if (filterVal === 99 && ageYears < 3) return false;
+            }
+
             return true;
         });
 
-        // Sort
         this.filteredListings.sort((a, b) => {
             switch (sortFilter) {
                 case 'verdict':
                     return this.getVerdictScore(b.analysis?.verdict) - this.getVerdictScore(a.analysis?.verdict);
                 case 'revenue':
                     return (b.financials?.revenue || 0) - (a.financials?.revenue || 0);
+                case 'asking-price':
+                    return (b.askingPrice || 0) - (a.askingPrice || 0);
                 case 'date':
                     return new Date(b.dateAdded) - new Date(a.dateAdded);
                 default:
@@ -136,6 +205,7 @@ class BRSniper {
             }
         });
 
+        this.currentPage = 1;
         this.renderListings();
     }
 
@@ -146,11 +216,70 @@ class BRSniper {
         if (this.filteredListings.length === 0) {
             grid.innerHTML = '';
             noResults.style.display = 'block';
+            this.renderPagination(0);
             return;
         }
 
         noResults.style.display = 'none';
-        grid.innerHTML = this.filteredListings.map(listing => this.createListingCard(listing)).join('');
+
+        const startIdx = (this.currentPage - 1) * this.pageSize;
+        const pageItems = this.filteredListings.slice(startIdx, startIdx + this.pageSize);
+        grid.innerHTML = pageItems.map(listing => this.createListingCard(listing)).join('');
+        this.renderPagination(this.filteredListings.length);
+    }
+
+    renderPagination(totalItems) {
+        let paginationEl = document.getElementById('pagination');
+        if (!paginationEl) {
+            paginationEl = document.createElement('div');
+            paginationEl.id = 'pagination';
+            paginationEl.className = 'pagination';
+            const grid = document.getElementById('listings-grid');
+            grid.parentNode.insertBefore(paginationEl, grid.nextSibling);
+        }
+
+        const totalPages = Math.ceil(totalItems / this.pageSize);
+        if (totalPages <= 1) {
+            paginationEl.innerHTML = '';
+            return;
+        }
+
+        let html = '';
+        if (this.currentPage > 1) {
+            html += `<button class="page-btn" data-page="${this.currentPage - 1}">&larr; Prev</button>`;
+        }
+
+        const startPage = Math.max(1, this.currentPage - 2);
+        const endPage = Math.min(totalPages, this.currentPage + 2);
+
+        if (startPage > 1) {
+            html += `<button class="page-btn" data-page="1">1</button>`;
+            if (startPage > 2) html += `<span class="page-dots">...</span>`;
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            html += `<button class="page-btn ${i === this.currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) html += `<span class="page-dots">...</span>`;
+            html += `<button class="page-btn" data-page="${totalPages}">${totalPages}</button>`;
+        }
+
+        if (this.currentPage < totalPages) {
+            html += `<button class="page-btn" data-page="${this.currentPage + 1}">Next &rarr;</button>`;
+        }
+
+        html += `<span class="page-info">Page ${this.currentPage} of ${totalPages} (${totalItems} listings)</span>`;
+
+        paginationEl.innerHTML = html;
+        paginationEl.onclick = (e) => {
+            const btn = e.target.closest('.page-btn');
+            if (!btn) return;
+            this.currentPage = parseInt(btn.dataset.page);
+            this.renderListings();
+            document.getElementById('listings').scrollIntoView({ behavior: 'smooth' });
+        };
     }
 
     getVerdictClass(verdict) {
@@ -185,34 +314,34 @@ class BRSniper {
             : '-';
 
         const highlights = listing.highlights?.slice(0, 4).map(h =>
-            `<span class="highlight-tag">${h}</span>`
+            `<span class="highlight-tag">${escapeHtml(h)}</span>`
         ).join('') || '';
 
         const categoryClass = listing.category.toLowerCase().replace(/\s+/g, '-');
         const source = this.data.sources.find(s => s.id === listing.source);
         const sourceName = source?.name || listing.source;
         const sourceFlag = source?.flag || '';
+        const listingUrl = isValidUrl(listing.url) ? listing.url : '#';
 
-        // Analysis section
         const analysis = listing.analysis;
         const verdictClass = this.getVerdictClass(analysis?.verdict);
 
         const analysisHtml = analysis ? `
             <div class="listing-analysis">
-                <div class="verdict ${verdictClass}">${analysis.verdict}</div>
+                <div class="verdict ${verdictClass}">${escapeHtml(analysis.verdict)}</div>
                 <div class="analysis-details">
-                    <p class="reasoning">${analysis.reasoning}</p>
+                    <p class="reasoning">${escapeHtml(analysis.reasoning)}</p>
                     <div class="analysis-meta">
-                        <span class="copyable"><strong>Copyable:</strong> ${analysis.uspCopyable}</span>
+                        <span class="copyable"><strong>Copyable:</strong> ${escapeHtml(analysis.uspCopyable)}</span>
                     </div>
                     ${analysis.risks?.length && analysis.risks[0] !== 'N/A - sold' ? `
                         <div class="risks">
-                            <strong>Risks:</strong> ${analysis.risks.join(' · ')}
+                            <strong>Risks:</strong> ${escapeHtml(analysis.risks.join(' · '))}
                         </div>
                     ` : ''}
                     ${analysis.opportunity ? `
                         <div class="opportunity">
-                            <strong>Opportunity:</strong> ${analysis.opportunity}
+                            <strong>Opportunity:</strong> ${escapeHtml(analysis.opportunity)}
                         </div>
                     ` : ''}
                 </div>
@@ -223,13 +352,13 @@ class BRSniper {
             <article class="listing-card ${verdictClass}">
                 <div class="listing-header">
                     <div class="listing-meta">
-                        <span class="listing-category ${categoryClass}">${listing.category}</span>
+                        <span class="listing-category ${categoryClass}">${escapeHtml(listing.category)}</span>
                         <span class="listing-revenue">${mrr || revenue}</span>
                     </div>
-                    <h3 class="listing-title">${listing.title}</h3>
+                    <h3 class="listing-title">${escapeHtml(listing.title)}</h3>
                 </div>
                 <div class="listing-body">
-                    <p class="listing-description">${listing.description}</p>
+                    <p class="listing-description">${escapeHtml(listing.description)}</p>
                     <div class="listing-metrics">
                         <div class="metric">
                             <div class="metric-value">${revenue}</div>
@@ -252,8 +381,8 @@ class BRSniper {
                     ${analysisHtml}
                 </div>
                 <div class="listing-footer">
-                    <span class="listing-source">${sourceFlag} via ${sourceName}</span>
-                    <a href="${listing.url}" target="_blank" rel="noopener" class="listing-link">
+                    <span class="listing-source">${escapeHtml(sourceFlag)} via ${escapeHtml(sourceName)}</span>
+                    <a href="${listingUrl}" target="_blank" rel="noopener" class="listing-link">
                         View Listing →
                     </a>
                 </div>
@@ -262,7 +391,7 @@ class BRSniper {
     }
 
     renderInsights() {
-        // EBITDA Multiples
+        if (!this.data) return;
         const multiplesList = document.getElementById('multiples-list');
         const multiples = this.data.marketInsights.ebitdaMultiples;
 
@@ -270,23 +399,21 @@ class BRSniper {
             .filter(([key]) => key !== 'average')
             .map(([sector, range]) => `
                 <div class="multiple-item">
-                    <span class="multiple-sector">${sector}</span>
-                    <span class="multiple-range">${range.low}x - ${range.high}x</span>
+                    <span class="multiple-sector">${escapeHtml(sector)}</span>
+                    <span class="multiple-range">${escapeHtml(String(range.low))}x - ${escapeHtml(String(range.high))}x</span>
                 </div>
             `).join('') + `
                 <div class="multiple-item average">
                     <span class="multiple-sector">Average (all sectors)</span>
-                    <span class="multiple-range">${multiples.average}x</span>
+                    <span class="multiple-range">${escapeHtml(String(multiples.average))}x</span>
                 </div>
             `;
 
-        // Trends
         const trendsList = document.getElementById('trends-list');
         trendsList.innerHTML = this.data.marketInsights.trends
-            .map(trend => `<li>${trend}</li>`)
+            .map(trend => `<li>${escapeHtml(trend)}</li>`)
             .join('');
 
-        // Categories - show counts from our data
         const categoriesOverview = document.getElementById('categories-overview');
         const categoryCounts = {};
         this.data.listings.forEach(l => {
@@ -297,29 +424,31 @@ class BRSniper {
             .sort((a, b) => b[1] - a[1])
             .map(([cat, count]) => `
                 <div class="category-item">
-                    <span class="category-name">${cat}</span>
+                    <span class="category-name">${escapeHtml(cat)}</span>
                     <span class="category-count">${count} listings</span>
                 </div>
             `).join('');
     }
 
     renderSources() {
+        if (!this.data) return;
         const sourcesGrid = document.getElementById('sources-grid');
         sourcesGrid.innerHTML = this.data.sources.map(source => {
             const count = this.data.listings.filter(l => l.source === source.id).length;
+            const sourceUrl = isValidUrl(source.url) ? source.url : '#';
             return `
                 <div class="source-card">
                     <div class="source-header">
-                        <span class="source-flag">${source.flag || ''}</span>
-                        <h3>${source.name}</h3>
+                        <span class="source-flag">${escapeHtml(source.flag)}</span>
+                        <h3>${escapeHtml(source.name)}</h3>
                     </div>
-                    <div class="source-country">${source.country}</div>
-                    <p>${source.description}</p>
+                    <div class="source-country">${escapeHtml(source.country)}</div>
+                    <p>${escapeHtml(source.description)}</p>
                     <div class="source-stats">
                         <span class="source-count">${count} listings tracked</span>
                     </div>
-                    <a href="${source.url}" target="_blank" rel="noopener" class="source-link">
-                        Visit ${source.name} →
+                    <a href="${sourceUrl}" target="_blank" rel="noopener" class="source-link">
+                        Visit ${escapeHtml(source.name)} →
                     </a>
                 </div>
             `;
@@ -327,13 +456,13 @@ class BRSniper {
     }
 
     updateStats() {
+        if (!this.data) return;
         document.getElementById('total-listings').textContent = this.data.listings.length;
         document.getElementById('total-sources').textContent = this.data.sources.length;
         document.getElementById('last-updated').textContent = this.formatDate(this.data.lastUpdated);
     }
 
     formatCurrency(amount) {
-        // Detect if likely USD (from US sources)
         if (amount >= 1000000) {
             return `$${(amount / 1000000).toFixed(1)}M`;
         } else if (amount >= 1000) {
@@ -348,7 +477,6 @@ class BRSniper {
     }
 }
 
-// Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
     new BRSniper();
 });

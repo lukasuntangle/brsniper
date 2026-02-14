@@ -5,6 +5,11 @@
 
 const fs = require('fs');
 const path = require('path');
+const { StartupSchema, FundedDataSchema } = require('./schemas');
+
+const FETCH_TIMEOUT = 30000;
+const MAX_RETRIES = 3;
+const LOOKBACK_DAYS = 365;
 
 // RSS Feed URLs for funding news
 const FUNDING_SOURCES = [
@@ -29,6 +34,21 @@ const FUNDING_SOURCES = [
     feeds: [
       { url: 'https://news.crunchbase.com/feed/', category: 'funding' }
     ]
+  },
+  {
+    id: 'hackernews',
+    name: 'Hacker News',
+    feeds: [
+      { url: 'https://hnrss.org/newest?q=raises+funding', category: 'community' },
+      { url: 'https://hnrss.org/newest?q=series+A+B+C', category: 'community' }
+    ]
+  },
+  {
+    id: 'producthunt',
+    name: 'Product Hunt',
+    feeds: [
+      { url: 'https://www.producthunt.com/feed', category: 'launches' }
+    ]
   }
 ];
 
@@ -52,25 +72,44 @@ const INDUSTRY_KEYWORDS = {
 };
 
 /**
+ * Fetch with timeout and retry
+ */
+async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT);
+      const response = await fetch(url, { ...options, signal: controller.signal });
+      clearTimeout(timeoutId);
+      return response;
+    } catch (error) {
+      if (attempt === retries) throw error;
+      const delay = attempt * 2000;
+      process.stderr.write(`  Retry ${attempt}/${retries} for ${url} in ${delay}ms\n`);
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
+  }
+}
+
+/**
  * Simple RSS parser (no external dependencies)
  */
 async function parseRSSFeed(url) {
   try {
-    const response = await fetch(url, {
+    const response = await fetchWithRetry(url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; BRSniper/1.0; +https://github.com/brsniper)'
       }
     });
 
     if (!response.ok) {
-      console.log(`Failed to fetch ${url}: ${response.status}`);
+      process.stderr.write(`Failed to fetch ${url}: ${response.status}\n`);
       return [];
     }
 
     const xml = await response.text();
     const items = [];
 
-    // Simple regex-based XML parsing for RSS items
     const itemRegex = /<item>([\s\S]*?)<\/item>/g;
     let match;
 
@@ -94,7 +133,7 @@ async function parseRSSFeed(url) {
 
     return items;
   } catch (error) {
-    console.error(`Error parsing RSS feed ${url}:`, error.message);
+    process.stderr.write(`Error parsing RSS feed ${url}: ${error.message}\n`);
     return [];
   }
 }
@@ -112,7 +151,7 @@ function decodeHTMLEntities(text) {
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
-    .replace(/<[^>]*>/g, ''); // Strip HTML tags
+    .replace(/<[^>]*>/g, '');
 }
 
 /**
@@ -129,7 +168,6 @@ function isFundingArticle(title, description) {
 function extractFundingAmount(title, description) {
   const text = `${title} ${description}`;
 
-  // Pattern: $X million, $XM, €X million, etc.
   const patterns = [
     /\$(\d+(?:\.\d+)?)\s*(?:million|m\b)/i,
     /\$(\d+(?:\.\d+)?)\s*(?:billion|b\b)/i,
@@ -142,7 +180,6 @@ function extractFundingAmount(title, description) {
     const match = text.match(pattern);
     if (match) {
       const amount = parseFloat(match[1]);
-      // Check if it's billion
       if (pattern.source.includes('billion')) {
         return amount * 1000000000;
       }
@@ -175,7 +212,6 @@ function extractFundingRound(title, description) {
  * Extract company name from funding article
  */
 function extractCompanyName(title) {
-  // Common patterns: "CompanyName raises $XM", "CompanyName secures funding"
   const patterns = [
     /^([A-Z][a-zA-Z0-9\s\.]+?)\s+(?:raises?|secures?|closes?|gets?|lands?|nabs?|bags?)/i,
     /^([A-Z][a-zA-Z0-9\s\.]+?),?\s+(?:a|an|the)?\s*(?:\w+\s+)*(?:startup|company)/i
@@ -188,7 +224,6 @@ function extractCompanyName(title) {
     }
   }
 
-  // Fallback: try to extract first capitalized phrase
   const words = title.split(/\s+/);
   let companyName = '';
   for (const word of words) {
@@ -223,7 +258,6 @@ function determineIndustry(title, description) {
 function extractInvestors(description) {
   const investors = [];
 
-  // Common VC/investor patterns
   const patterns = [
     /led by\s+([A-Z][a-zA-Z\s&\.]+?)(?:,|\.|and|with|along)/i,
     /backed by\s+([A-Z][a-zA-Z\s&\.]+?)(?:,|\.|and|with|along)/i,
@@ -255,7 +289,6 @@ function extractInvestors(description) {
 function generateCopyabilityAnalysis(industry, fundingRound, amountRaised, description) {
   const text = description.toLowerCase();
 
-  // Factors that make something hard to copy
   const hardFactors = [
     { keyword: 'patent', weight: 2 },
     { keyword: 'proprietary', weight: 2 },
@@ -270,7 +303,6 @@ function generateCopyabilityAnalysis(industry, fundingRound, amountRaised, descr
     { keyword: 'fda', weight: 2 }
   ];
 
-  // Factors that make something easier to copy
   const easyFactors = [
     { keyword: 'marketplace', weight: 1 },
     { keyword: 'platform', weight: 1 },
@@ -282,9 +314,8 @@ function generateCopyabilityAnalysis(industry, fundingRound, amountRaised, descr
     { keyword: 'workflow', weight: 1 }
   ];
 
-  let score = 3; // Start at medium
+  let score = 3;
 
-  // Adjust based on keywords
   hardFactors.forEach(factor => {
     if (text.includes(factor.keyword)) score -= factor.weight;
   });
@@ -292,19 +323,15 @@ function generateCopyabilityAnalysis(industry, fundingRound, amountRaised, descr
     if (text.includes(factor.keyword)) score += factor.weight;
   });
 
-  // Adjust based on funding amount (more funding = probably harder moat)
   if (amountRaised > 50000000) score -= 1;
   if (amountRaised > 100000000) score -= 1;
   if (amountRaised < 5000000) score += 1;
 
-  // Adjust based on round
   if (['Series C', 'Series D+', 'Growth'].includes(fundingRound)) score -= 1;
   if (['Pre-Seed', 'Seed'].includes(fundingRound)) score += 1;
 
-  // Clamp score between 1-5
   score = Math.max(1, Math.min(5, score));
 
-  // Generate verdict
   let verdict, reasoning, alternativeApproach;
 
   if (score >= 4) {
@@ -323,9 +350,9 @@ function generateCopyabilityAnalysis(industry, fundingRound, amountRaised, descr
 
   return {
     copyabilityScore: score,
-    verdict: verdict,
-    reasoning: reasoning,
-    alternativeApproach: alternativeApproach
+    verdict,
+    reasoning,
+    alternativeApproach
   };
 }
 
@@ -333,14 +360,15 @@ function generateCopyabilityAnalysis(industry, fundingRound, amountRaised, descr
  * Main function
  */
 async function main() {
-  console.log('🚀 BR Sniper - Starting funded startups fetch...\n');
+  process.stdout.write('BR Sniper - Starting funded startups fetch...\n\n');
 
   // Load existing data
   const dataPath = path.join(__dirname, '../data/funded-startups.json');
   let data;
 
   try {
-    data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    const rawData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    data = FundedDataSchema.parse(rawData);
   } catch (e) {
     data = {
       lastUpdated: new Date().toISOString().split('T')[0],
@@ -352,37 +380,32 @@ async function main() {
   const existingUrls = new Set(data.startups.map(s => s.articleUrl));
   const newStartups = [];
   const today = new Date().toISOString().split('T')[0];
-  // Lookback to Jan 1, 2025
-  const lookbackDate = new Date('2025-01-01').getTime();
+  // Dynamic lookback instead of hardcoded date
+  const lookbackDate = Date.now() - (LOOKBACK_DAYS * 24 * 60 * 60 * 1000);
 
   // Fetch from all sources
   for (const source of FUNDING_SOURCES) {
-    console.log(`📡 Fetching from ${source.name}...`);
+    process.stdout.write(`Fetching from ${source.name}...\n`);
 
     for (const feed of source.feeds) {
       const items = await parseRSSFeed(feed.url);
-      console.log(`   Found ${items.length} articles in ${feed.category} feed`);
+      process.stdout.write(`   Found ${items.length} articles in ${feed.category} feed\n`);
 
       for (const item of items) {
-        // Skip if already exists
         if (existingUrls.has(item.url)) {
           continue;
         }
 
-        // Skip if not a funding article
         if (!isFundingArticle(item.title, item.description)) {
           continue;
         }
 
-        // Skip if older than lookback date (Jan 1, 2025)
         if (item.pubDate.getTime() < lookbackDate) {
           continue;
         }
 
-        // Extract funding details
         const amount = extractFundingAmount(item.title, item.description);
 
-        // Skip if can't extract amount or below minimum
         if (!amount || amount < 250000) {
           continue;
         }
@@ -418,25 +441,27 @@ async function main() {
           dateAdded: today
         };
 
-        newStartups.push(startup);
+        const validated = StartupSchema.safeParse(startup);
+        if (!validated.success) {
+          process.stderr.write(`   Skipping invalid startup: ${validated.error.issues[0].message}\n`);
+          continue;
+        }
+        newStartups.push(validated.data);
         existingUrls.add(item.url);
       }
     }
   }
 
-  // Add new startups to data
   if (newStartups.length > 0) {
     data.startups = [...newStartups, ...data.startups];
     data.lastUpdated = today;
 
-    // Write updated data
     fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
-    console.log(`\n✅ Added ${newStartups.length} new funded startups`);
+    process.stdout.write(`\nAdded ${newStartups.length} new funded startups\n`);
   } else {
-    console.log('\n📭 No new funded startups matching criteria found');
+    process.stdout.write('\nNo new funded startups matching criteria found\n');
   }
 
-  // Create digest for funded startups
   const digest = {
     date: today,
     newStartups: newStartups.map(s => ({
@@ -450,9 +475,18 @@ async function main() {
 
   const digestPath = path.join(__dirname, '../data/funded-digest.json');
   fs.writeFileSync(digestPath, JSON.stringify(digest, null, 2));
-  console.log('📋 Funding digest created');
+  process.stdout.write('Funding digest created\n');
 
-  console.log('\n🎯 Done!');
+  process.stdout.write('\nDone!\n');
 }
 
-main().catch(console.error);
+// Exports for testing
+module.exports = {
+  isFundingArticle, extractFundingAmount, extractFundingRound,
+  extractCompanyName, determineIndustry, extractInvestors,
+  generateCopyabilityAnalysis, extractTag, decodeHTMLEntities
+};
+
+if (require.main === module) {
+  main().catch(err => { process.stderr.write(err.message + '\n'); process.exit(1); });
+}
