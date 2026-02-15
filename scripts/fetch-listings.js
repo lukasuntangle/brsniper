@@ -418,13 +418,14 @@ async function main() {
 
   if (newListings.length > 0) {
     data.listings = [...newListings, ...data.listings];
-    data.lastUpdated = today;
-
-    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
     process.stdout.write(`\nAdded ${newListings.length} new listings\n`);
   } else {
     process.stdout.write('\nNo new listings with revenue data found\n');
   }
+
+  // Always update lastUpdated so the frontend shows today's date
+  data.lastUpdated = today;
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 
   const digest = {
     date: today,

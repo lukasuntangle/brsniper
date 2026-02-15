@@ -454,13 +454,14 @@ async function main() {
 
   if (newStartups.length > 0) {
     data.startups = [...newStartups, ...data.startups];
-    data.lastUpdated = today;
-
-    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
     process.stdout.write(`\nAdded ${newStartups.length} new funded startups\n`);
   } else {
     process.stdout.write('\nNo new funded startups matching criteria found\n');
   }
+
+  // Always update lastUpdated so the frontend shows today's date
+  data.lastUpdated = today;
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 
   const digest = {
     date: today,
